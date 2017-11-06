@@ -1,0 +1,46 @@
+.button
+  font-family: $family-strong
+  font-size: 1rem
+  color: #ffffff
+  height: $button-height
+  border-radius: $radius
+  -moz-appearance: none
+  -webkit-appearance: none
+  align-items: center
+  box-shadow: none
+  justify-content: flex-start
+  padding: 0 $button-padding
+  transition: background-color 0.3s ease
+  &.is-fullwidth
+    width: 100%
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    $color-hover: nth($pair, 3)
+    $color-active: nth($pair, 4)
+    &.is-#{$name}
+      background: $color
+      border: 1px solid transparent
+      &:active,
+      &.is-active
+        background-color: $color-active
+        border-color: transparent
+        color: $color-invert
+      &:focus,
+      &.is-focused
+        outline: 1px dotted rgba(125, 211, 231, 0.5)
+        outline-offset: -5px
+      &:hover,
+      &.is-hovered
+        background-color: $color-hover
+        border-color: transparent
+        color: $color-invert
+      &.is-small
+        height: $button-small-height
+      &.is-invert
+        border: 2px solid $button-border
+        background: $color
+        &:hover,
+        &.is-hovered
+          background-color: #ffffff
+          color: $brand

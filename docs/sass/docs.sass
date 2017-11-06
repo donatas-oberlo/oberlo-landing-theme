@@ -1,0 +1,54 @@
+$doc-space: 30px
+$doc-space-medium: 20px
+
+
+.intro-page
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    padding-bottom: $doc-space
+    &.doc-title
+      padding: $doc-space 0 $doc-space-medium 0
+      margin-bottom: $doc-space-medium
+      border-bottom: 1px solid $border
+
+  blockquote,
+  p
+    padding-bottom: $doc-space-medium
+
+  button
+    margin-bottom: $doc-space
+
+.color-box
+  display: flex
+  align-items: center
+  p
+    padding: 0 $doc-space-medium
+.color-circle
+  width: 70px
+  height: 70px
+  border-radius: 100%
+  &.main-text
+    background: $text
+  &.sub-text
+    background: $sub-text
+  &.quotes
+    background: $text-quotes
+  &.links
+    background: $link
+  &.borders
+    background: $border
+  &.brand
+    background: $brand
+  &.success
+    background: $success
+
+.brand-background
+  background: $brand
+
+.takeup-space
+  width: 100%
+  height: 100%
