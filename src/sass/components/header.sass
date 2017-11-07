@@ -10,3 +10,20 @@
     &:hover
       span
         height: 2px
+
+  a.navbar-item,
+  a.navbar-link
+    color: $text-navbar
+
+    &:hover,
+    .is-active
+      background-color:  transparent
+
+  @media screen and (min-width: 1024px)
+    &.navbar-primary
+      min-height: 94px
+
+  .navbar-brand .navbar-item img
+    min-height: 34px
+
+  &.navbar-secondary
