@@ -46,7 +46,7 @@
   min-height: 60px
 
 // mobile
-@media screen and (max-width: 1023px)
++until($desktop)
   .section,
   .container
     padding: 0
@@ -104,7 +104,7 @@
       padding: 0
 
 // desktop
-@media screen and (min-width: 1024px)
++from($desktop)
   .navbar
     .navbar-dropdown
       background-color: #FFFFFF
