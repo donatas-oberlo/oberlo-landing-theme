@@ -1,11 +1,8 @@
-export default function() {
-  // Get all "navbar-burger" elements
+function initNavbarBurger() {
   const $navbarBurgers = document.querySelectorAll('.navbar-burger');
 
-  // Check if there are any navbar burgers
   if ($navbarBurgers.length > 0) {
 
-    // Add a click event on each of them
     $navbarBurgers.forEach(($el) => {
       $el.addEventListener('click', () => {
         // Get the target from the "data-target" attribute
@@ -19,3 +16,35 @@ export default function() {
     });
   }
 }
+
+function initNavbarDropdown() {
+  const $navbarDropdown = document.querySelectorAll('.navbar-item.has-dropdown');
+
+  if ($navbarDropdown.length > 0) {
+
+    $navbarDropdown.forEach(($el) => {
+      $el.addEventListener('click', () => {
+        $el.classList.toggle('show-dropdown');
+      });
+    });
+  }
+}
+
+function initShowAllArticles() {
+  const $navbarDropdown = document.querySelector('#show-all-articles');
+  const $allArticles = document.querySelector('#all-articles');
+
+  if ($navbarDropdown && $allArticles) {
+    $navbarDropdown.addEventListener('click', () => {
+      $allArticles.classList.toggle('is-hidden-touch');
+    });
+  }
+}
+
+function initHeader() {
+  initNavbarBurger();
+  initNavbarDropdown();
+  initShowAllArticles();
+}
+
+export default initHeader;

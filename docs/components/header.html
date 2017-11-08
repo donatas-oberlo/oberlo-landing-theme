@@ -7,90 +7,170 @@
   <script type="text/javascript" src="/src/fonts/fonts.js"></script>
 </head>
 <body>
-<div class="container">
-  <nav class="navbar navbar-primary">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="#">
-        <img src="/assets/oberlo-logo-color-whitebg.svg" alt="Oberlo logo" width="139" height="34">
-      </a>
-      <button class="button navbar-burger" data-target="navMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+<header>
+  <div class="navbar-primary">
+    <nav class="container navbar" role="navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="/assets/oberlo-logo-color-whitebg.svg" alt="Oberlo logo" width="125" height="30">
+        </a>
+        <button class="button navbar-burger" data-target="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
 
-    <div class="navbar-menu" id="navMenu">
-      <div class="navbar-end">
-        <a class="navbar-item" href="#">Features</a>
-        <a class="navbar-item" href="#">Pricing</a>
-        <a class="navbar-item is-active" href="#">Blog</a>
-        <a class="navbar-item" href="#">Success Stories</a>
-        <a class="navbar-item" href="#">FAQs</a>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">
-            Resources
-          </a>
-          <div class="navbar-dropdown is-boxed">
-            <a class="navbar-item" href="#">Resource 1</a>
-            <a class="navbar-item" href="#">Resource 2</a>
-            <a class="navbar-item" href="#">Resource 3</a>
-            <a class="navbar-item" href="#">Resource 4</a>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#">Features</a>
+          <a class="navbar-item" href="#">Pricing</a>
+          <a class="navbar-item is-active" href="#">Blog</a>
+          <a class="navbar-item" href="#">Success Stories</a>
+          <a class="navbar-item" href="#">FAQs</a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="#">
+              Resources
+            </a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="#">Resource 1</a>
+              <a class="navbar-item" href="#">Resource 2</a>
+              <a class="navbar-item" href="#">Resource 3 Resource 3 Resource 3 Resource 3</a>
+              <a class="navbar-item" href="#">Resource 4</a>
+            </div>
           </div>
-        </div>
-        <a class="navbar-item" href="#">Login</a>
-      </div>
-    </div>
-  </nav>
-</div>
-
-<section class="section">
-  <div class="container">
-    <h1>Header component page</h1>
-
-    <nav class="navbar navbar-secondary" role="navigation">
-      <a class="navbar-item" href="#">Most Popular</a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">How to Dropship</a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item">Drop down menu 1</a>
-          <a class="navbar-item">Drop down menu 2</a>
-          <a class="navbar-item">Drop down menu 3</a>
-          <a class="navbar-item">Drop down menu 4</a>
-        </div>
-      </div>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">What to Sell</a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item">Drop down menu 1</a>
-          <a class="navbar-item">Drop down menu 2</a>
-          <a class="navbar-item">Drop down menu 3</a>
-          <a class="navbar-item">Drop down menu 4</a>
-        </div>
-      </div>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">Store Setup</a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item">Drop down menu 1</a>
-          <a class="navbar-item">Drop down menu 2</a>
-          <a class="navbar-item">Drop down menu 3</a>
-          <a class="navbar-item">Drop down menu 4</a>
-        </div>
-      </div>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">Marketing Your Store</a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item">Drop down menu 1</a>
-          <a class="navbar-item">Drop down menu 2</a>
-          <a class="navbar-item">Drop down menu 3</a>
-          <a class="navbar-item">Drop down menu 4</a>
+          <a class="navbar-item" href="#">Login</a>
         </div>
       </div>
     </nav>
   </div>
+  <div class="is-hidden-touch">
+    <div style="height:320px; background-color: lightgray"></div>
+  </div>
+  <div class="navbar-secondary">
+    <nav class="container navbar">
+      <div class="navbar-start is-hidden-desktop">
+        <div id="show-all-articles" class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Show All Articles</a>
+        </div>
+      </div>
+
+      <div class="navbar-start is-hidden-desktop">
+        <div class="navbar-item">
+          <div class="search-field" style="    position: relative;">
+            <input class="input" type="text" placeholder="Type Your Search Here..." style="
+            border: none;
+            box-shadow: none;
+            outline: none;
+            font-size: 16px;
+            line-height: 28px;
+            color: #818D9A;
+            padding: 0;
+            margin: 0;
+            padding-right: 2rem;
+            margin-right: 2rem;
+            ">
+            <span style="
+    position: absolute;
+    top: 0;
+    right: 16px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+">
+              &#x1F50D;
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div id="all-articles" class="navbar-start is-hidden-touch">
+        <div class="navbar-item">
+          <a class="navbar-link">Most Popular</a>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">How to Dropship</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">Drop down menu 1</a>
+            <a class="navbar-item">Drop down menu 2</a>
+            <a class="navbar-item">Drop down menu 3</a>
+            <a class="navbar-item">Drop down menu 4</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">What to Sell</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">Drop down menu 1</a>
+            <a class="navbar-item">Drop down menu 2</a>
+            <a class="navbar-item">Drop down menu 3</a>
+            <a class="navbar-item">Drop down menu 4</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">Store Setup</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">Drop down menu 1</a>
+            <a class="navbar-item">Drop down menu 2</a>
+            <a class="navbar-item">Drop down menu 3</a>
+            <a class="navbar-item">Drop down menu 4</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">Marketing Your Store</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">Drop down menu 1</a>
+            <a class="navbar-item">Drop down menu 2</a>
+            <a class="navbar-item">Drop down menu 3</a>
+            <a class="navbar-item">Drop down menu 4</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end is-hidden-touch">
+        <div class="navbar-item">
+          <div class="search-field" style="    position: relative;">
+            <input class="input" type="text" placeholder="Type Your Search Here..." style="
+            border: none;
+            box-shadow: none;
+            outline: none;
+            font-size: 16px;
+            line-height: 28px;
+            color: #818D9A;
+            padding: 0;
+            margin: 0;
+            padding-right: 2rem;
+            margin-right: 2rem;
+            ">
+          </div>
+        </div>
+      </div>
+      <div class="navbar-end is-hidden-touch">
+        <div class="navbar-item">
+          <div class="search-field" style="    position: relative;">
+            <span style="
+    position: absolute;
+    top: 0;
+    right: 16px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+">
+              &#x1F50D;
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <h1>Header component page</h1>
 </section>
 <script src="/dist/bundle.js"></script>
 </body>

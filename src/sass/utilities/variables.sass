@@ -4,20 +4,19 @@ $family-strong: ProximaNova-Bold
 $family-code: $family-primary
 $radius: 3px
 
-// Text colors
-$text: #202E3C
-$text-strong: $text
-$text-additional: #818D9A
-$text-quotes: #27B7D7
-$text-navbar: #18222E
-$link: #1A81C5
-$link-hover: $link
-
 // Colors
 $sub-text: #818D9A
 $border: #D2DCE8
 $brand: #27B7D7
 $success: #6BCB3B
+
+// Text colors
+$text: #202E3C
+$text-strong: $text
+$text-additional: #818D9A
+$text-quotes: $brand
+$link: #1A81C5
+$link-hover: $link
 
 // Layout
 $column-gap: 20px
@@ -39,3 +38,33 @@ $button-padding: 20px
 $button-border: #ffffff
 $button-hover-border: $brand
 $colors: ("default": ($brand, #ffffff, $default-hover, $default-active), "success": ($success, #ffffff, $success-hover, $success-active))
+
+// Navbar
+$navbar-background-color: transparent
+$navbar-height: 60px
+$navbar-item-color: #18222E
+$navbar-item-hover-color: $brand
+$navbar-item-hover-background-color: $navbar-background-color
+$navbar-item-active-color: $brand
+$navbar-item-active-background-color: transparent
+$navbar-item-img-max-height: 2rem
+$navbar-tab-hover-background-color: transparent
+$navbar-tab-hover-border-bottom-color: $link
+$navbar-tab-active-color: $link
+$navbar-tab-active-background-color: transparent
+$navbar-tab-active-border-bottom-color: $link
+$navbar-tab-active-border-bottom-style: solid
+$navbar-tab-active-border-bottom-width: 3px
+$navbar-dropdown-background-color: $navbar-background-color
+$navbar-dropdown-border-top: 1px solid $border
+$navbar-dropdown-offset: -4px
+$navbar-dropdown-arrow: $link
+$navbar-dropdown-radius: $radius-large
+$navbar-dropdown-z: 20
+$navbar-dropdown-boxed-radius: $radius-large
+$navbar-dropdown-boxed-shadow: 0 8px 8px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1)
+$navbar-dropdown-item-hover-color: $black
+//$navbar-dropdown-item-hover-background-color: blue
+$navbar-dropdown-item-active-color: $link
+//$navbar-dropdown-item-active-background-color: blue
+$navbar-divider-background-color: $border
