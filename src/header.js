@@ -58,11 +58,23 @@ function initShrinkHeader() {
   }
 }
 
+function initSearchNavbarSecondary() {
+  const $btn = document.querySelector('.nav-search-button');
+  const $navbar = document.querySelector('.navbar-secondary .navbar');
+
+  if ($btn && $navbar) {
+    $btn.addEventListener('click', () => {
+      $navbar.classList.toggle('search');
+    });
+  }
+}
+
 function initHeader() {
   initNavbarBurger();
   initNavbarDropdown();
   initShowAllArticles();
   initShrinkHeader();
+  initSearchNavbarSecondary();
 }
 
 export default initHeader;

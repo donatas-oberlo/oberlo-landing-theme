@@ -175,7 +175,70 @@
   line-height: 17px
   padding: 1rem
 
-
   &.has-column-separator-separator
     li + li::before
       content: "\007c"
+
+// Search
+=search-input
+  border: none
+  box-shadow: none
+  outline: none
+  font-size: 16px
+  line-height: 28px
+  color: #818D9A
+  margin: 0
+  width: 100%
+
+.nav-search-button
+  cursor: pointer
+
+  img
+    max-height: 100%
+    width: 1.5rem
+
+#all-articles
+  visibility: visible
+  opacity: 1
+  transition: visibility 0s, opacity 1s linear
+
+#nav-search-item
+  .navbar-item
+    display: flex
+    height: 100%
+
+    input
+      padding: 0.75rem 1.5rem 0.75rem 1.0rem
+      line-height: 28px
+      flex: 1
+
+      +search-input
+
+    img
+      max-height: 100%
+      width: 1.5rem
+      margin-right: 0.7rem
+
+#nav-search-field
+  flex: 1
+  visibility: hidden
+  opacity: 0
+  transition: visibility 0s, opacity 1s linear
+
+  .navbar-item
+    height: 100%
+
+    input
+      padding: 0 1rem
+      +search-input
+
+.search
+  #all-articles
+    position: absolute
+    opacity: 0
+    visibility: hidden
+
+  #nav-search-field
+    visibility: visible
+    opacity: 1
+    display: block
