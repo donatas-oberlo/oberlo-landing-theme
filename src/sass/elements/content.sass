@@ -8,6 +8,11 @@ h6
   font-family: $content-heading-font-family
   &.is-inverted
     color: #ffffff
+  a
+    color: $content-heading-color
+    &:hover
+      color: $content-heading-color
+      text-decoration: underline
 
 blockquote,
 p
@@ -45,6 +50,34 @@ blockquote
   &.is-medium
     font-size: 1.625rem
     line-height: 2.25rem
+
+a
+  color: $link
+  &:hover
+    color: $brand
+
+a.read-more
+  position: relative
+  font-size: 1.125rem
+  line-height: 1.875rem
+  padding-right: 0.7em
+  &:hover
+    color: $brand
+  &:after
+    position: absolute
+    top: 50%
+    right: 0
+    margin-top: -0.2em
+    border: 1px solid $link
+    border-right: 0
+    border-top: 0
+    content: " "
+    display: block
+    height: 0.4em
+    pointer-events: none
+    position: absolute
+    transform: rotate(-135deg)
+    width: 0.4em
 
 p, span
   font-size: 1.125rem
