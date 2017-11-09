@@ -135,6 +135,10 @@
     border-bottom: 1px solid $border
     border-top: 1px solid $border
 
+    .navbar-item:first-child,
+    .navbar-item:first-child a
+      padding-left: 0
+
     .navbar-item > .navbar-link
       padding: 0 1em
       line-height: 28px
@@ -151,3 +155,11 @@
         top: calc(100% + 22px)
 
 
+.breadcrumb
+  font-size: 14px
+  line-height: 17px
+  padding-top: 1rem
+
+  &.has-column-separator-separator
+    li + li::before
+      content: "\007c"
