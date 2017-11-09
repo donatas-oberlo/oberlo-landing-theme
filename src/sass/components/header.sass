@@ -34,14 +34,21 @@
       border-radius: 1px
 
   .navbar-item,
-  .navbar-link
+  .navbar-link,
+  .navbar-link::after
     transition: color $speed $easing
 
   .navbar-link::after
     display: none
 
-  .has-dropdown .navbar-link::after
-    +arrow($navbar-dropdown-arrow)
+  .has-dropdown
+    .navbar-link::after
+      +arrow($navbar-dropdown-arrow)
+
+    &:hover
+      .navbar-link,
+      .navbar-link::after
+        color: $brand
 
   // mobile
   +until($desktop)
