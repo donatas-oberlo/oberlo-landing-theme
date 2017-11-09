@@ -2,6 +2,7 @@
 .navbar
   margin: 0 auto
   position: relative
+  min-height: inherit
   height: 100%
 
   .button.navbar-burger
@@ -26,24 +27,16 @@
     display: none
 
   .has-dropdown .navbar-link::after
-    border-left: 0.3rem solid transparent
-    border-right: 0.3rem solid transparent
-    border-bottom: 0.3rem solid #818D9A
-    border-top: 0
-    content: " "
-    display: block
-    height: 0.3rem
-    pointer-events: none
-    position: absolute
-    transform: rotate(180deg)
-    width: 0.3rem
-    margin-top: -0.3em
-    right: 1.125em
-    top: 50%
-    transition: transform $speed $easing
+    +arrow($navbar-dropdown-arrow)
 
 .navbar-primary
-  min-height: 60px
+  height: 60px
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  background-color: $white
+  z-index: 30
 
 // mobile
 +until($desktop)
@@ -54,7 +47,7 @@
   .navbar
     .navbar-menu
       padding: 0
-      border-bottom: 2px solid #D2DCE8
+      border-bottom: 2px solid $border
       box-shadow: none
 
     .navbar-start,
@@ -75,7 +68,7 @@
         display: none
 
       &.show-dropdown
-        background-color: #F8FAFB
+        background-color: $navbar-dropdown-item-active-background-color
 
         .navbar-link::after
           transform: rotate(0deg)
@@ -86,19 +79,23 @@
             font-size: 14px
             line-height: 28px
 
+  html
+    // primary navbar expanding
+    padding-top: 60px
+
   .navbar-primary
     .navbar-start,
     .navbar-end
       > a.navbar-item,
       > a.navbar-link,
       > div > a.navbar-link
-        border-bottom: 1px solid #D2DCE8
+        border-bottom: 1px solid $border
 
   .navbar-secondary
-    border-bottom: 1px solid #D2DCE8
+    border-bottom: 1px solid $border
 
     .navbar-start
-      border-top: 1px solid #D2DCE8
+      border-top: 1px solid $border
 
     .navbar-item
       padding: 0
@@ -107,12 +104,10 @@
 +from($desktop)
   .navbar
     .navbar-dropdown
-      background-color: #FFFFFF
+      background-color: $white
       width: calc(150%)
       left: calc(-25%)
       box-shadow: 0 5px 19px 1px rgba(0,0,0,0.09)
-      border: none
-      border-top: 4px solid #27B7D7
       border-radius: 0
       padding-bottom: 1rem
       padding-top: 1rem
@@ -125,13 +120,20 @@
         display: block
         padding: 0.375rem 1rem
 
-    .navbar-link:hover::after
-      transform: rotate(0deg)
+  html
+    // primary navbar expanding
+    padding-top: 94px
+
+  .navbar-primary
+    transition: all 0.3s
+
+    &.expanded
+      height: 94px
 
   .navbar-secondary
     height: 72px
-    border-bottom: 1px solid #D2DCE8
-    border-top: 1px solid #D2DCE8
+    border-bottom: 1px solid $border
+    border-top: 1px solid $border
 
     .navbar-item > .navbar-link
       padding: 0 1em
@@ -143,7 +145,7 @@
 
     > .navbar-item ~ .navbar-item
       margin: 22px 0
-      border-left: 1px solid #D2DCE8
+      border-left: 1px solid $border
 
       .navbar-dropdown
         top: calc(100% + 22px)

@@ -41,10 +41,28 @@ function initShowAllArticles() {
   }
 }
 
+function getCurrentScroll() {
+  return window.pageYOffset || document.documentElement.scrollTop;
+}
+
+function initShrinkHeader() {
+  const shrinkHeader = 94;
+  const $header = document.querySelector('.navbar-primary');
+
+  if ($header) {
+    window.addEventListener('scroll', function(e) {
+      const scroll = getCurrentScroll();
+
+      $header.classList.toggle('expanded', scroll < shrinkHeader);
+    });
+  }
+}
+
 function initHeader() {
   initNavbarBurger();
   initNavbarDropdown();
   initShowAllArticles();
+  initShrinkHeader();
 }
 
 export default initHeader;
