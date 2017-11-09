@@ -1,10 +1,15 @@
 .footer
   background: $color-footer
   color: $sub-text
-  a:hover
-    color: #ffffff
-    svg
-      fill: #ffffff
+  padding-top: 70px
+  +until($tablet)
+    padding: 30px
+  a
+    transition: color $speed $easing
+    &:hover
+      color: #ffffff
+      svg
+        fill: #ffffff
   p
     color: $sub-text
   .footer-menu
@@ -21,8 +26,8 @@
         display: none
       li
         font-size: 0.875rem
+        padding: 10px 0
         a
-          line-height: 2.375rem
           color: $sub-text
           &:hover
             color: #ffffff
@@ -33,7 +38,7 @@
       padding-bottom: 15px
     ul
       display: block
-    .arrow-box
+    .footer-menu-title:after
       margin-top: -12px
       border-width: 0 6px 6px 6px
       border-color: transparent transparent $sub-text transparent
@@ -45,6 +50,9 @@
 
 .footer-social-icons
   margin-top: 40px
+  +until($tablet)
+    margin-top: 30px
+    margin-bottom: 10px
   li
     display: inline-block
     padding-right: 5px
@@ -60,6 +68,8 @@
   margin-top: 20px
   padding-top: 10px
   +until($tablet)
+    padding-bottom: 10px
+    padding-top: 20px
     div
       padding-bottom: 10px
   +from($tablet)
@@ -81,16 +91,22 @@
       text-align: right
 
 +until($tablet)
+  .footer-menu
+    margin: 0 5px
   .footer-menu-title
-    display: flex
-    justify-content: space-between
-    align-items: center
-  .arrow-box
-    width: 0
-    height: 0
-    border-style: solid
-    border-width: 6px 6px 0 6px
-    border-color: $sub-text transparent transparent transparent
+    display: block
+    position: relative
+    &:after
+      position: absolute
+      right: 0
+      top: 50%
+      margin-top: -3px
+      content: " "
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 6px 6px 0 6px
+      border-color: $sub-text transparent transparent transparent
 
 
 
