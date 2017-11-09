@@ -1,6 +1,10 @@
 .footer
   background: $color-footer
   color: $sub-text
+  a:hover
+    color: #ffffff
+    svg
+      fill: #ffffff
   p
     color: $sub-text
   .footer-menu
@@ -8,6 +12,7 @@
       border-top: 1px solid $color-footer-border
       &:last-child
         border-bottom: 1px solid $color-footer-border
+
     h6
       +from($tablet)
         padding-bottom: 15px
@@ -19,6 +24,8 @@
         a
           line-height: 2.375rem
           color: $sub-text
+          &:hover
+            color: #ffffff
 
 +until($tablet)
   .footer-menu.is-active
