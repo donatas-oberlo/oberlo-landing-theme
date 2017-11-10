@@ -1,6 +1,8 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
 module.exports = {
   entry: {
     bundle: './main.js',
@@ -35,6 +37,9 @@ module.exports = {
     }),
     new CompressionPlugin({
       test: /\.css/
-    })
+    }),
+    new UglifyJSPlugin({
+      sourceMap: true
+    }),
   ]
 };
