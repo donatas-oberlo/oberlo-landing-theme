@@ -1,0 +1,32 @@
+.pagination
+  display: flex
+  text-align: center
+  justify-content: center
+  ul
+    li
+      display: inline-block
+      .current
+        font-family: $family-strong
+        font-size: 0.9375rem
+        color: $brand
+        padding: 5px 12px
+      a
+        display: block
+        font-size: 0.9375rem
+        color: $sub-text
+        padding: 5px
+        margin: 0 7px
+        &:hover
+          color: $brand
+        &.prev, &.next
+          position: relative
+          font-size: 1rem
+          &:after
+            +arrow-after($sub-text, 45deg)
+        &.next
+          &:after
+            transform: rotate(-135deg)
+        &.prev:hover, &.next:hover
+          &:after
+            border-color: $brand
+
