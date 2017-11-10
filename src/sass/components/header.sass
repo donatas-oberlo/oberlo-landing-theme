@@ -2,10 +2,10 @@
 +until($desktop)
   html
     padding-top: 60px
-
-  .section,
-  .container
-    padding: 0
+  header
+    .section,
+    .container
+      padding: 0
 
 // desktop
 +from($desktop)
@@ -169,15 +169,15 @@
 
       .navbar-dropdown
         top: calc(100% + 22px)
+header
+  .breadcrumb
+    font-size: 14px
+    line-height: 17px
+    padding: 1rem
 
-.breadcrumb
-  font-size: 14px
-  line-height: 17px
-  padding: 1rem
-
-  &.has-column-separator-separator
-    li + li::before
-      content: "\007c"
+    &.has-column-separator-separator
+      li + li::before
+        content: "\007c"
 
 // Search
 =search-input
