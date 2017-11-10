@@ -1,4 +1,5 @@
-import initHeader from './src/header';
+import initHeader from './src/js/header';
+import './src/js/footer';
 
 import './src/sass/styles.sass';
 
