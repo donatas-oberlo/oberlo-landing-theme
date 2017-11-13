@@ -46,9 +46,11 @@
       +arrow($navbar-dropdown-arrow)
 
     &:hover
-      .navbar-link,
-      .navbar-link::after
+      .navbar-link
         color: $brand
+
+      .navbar-link::after
+        border-bottom: 0.3125rem solid $brand
 
   // mobile
   +until($desktop)
@@ -104,6 +106,9 @@
         display: block
         padding: 0.375rem 1rem
 
+      a.navbar-item:hover
+        color: $brand
+        background-color: inherit
 
 // Navbar primary
 .navbar-primary
@@ -193,9 +198,16 @@ header
 .nav-search-button
   cursor: pointer
 
-  img
+  .icon-search,
+  .icon-close
     max-height: 100%
     width: 1.5rem
+    transition: visibility 0s, opacity 1s linear
+    position: absolute
+
+  .icon-close
+    visibility: hidden
+    opacity: 0
 
 #all-articles
   visibility: visible
@@ -243,36 +255,12 @@ header
     opacity: 1
     display: block
 
-.header-promo
-  height: 20rem
-  background-color: #F0F3F7
+  .nav-search-button
+    .icon-search
+      visibility: hidden
+      opacity: 0
 
-  .container
-    text-align: left
-    height: 100%
+    .icon-close
+      visibility: visible
+      opacity: 1
 
-    > div
-      width: 33rem
-      padding: 1.5rem 1rem
-      height: 100%
-      position: absolute
-      display: flex
-      justify-content: center
-      flex-direction: column
-
-      > p.is-intro,
-      > div.field
-        padding-top: 1rem
-
-      input
-        font-size: 14px
-        line-height: 20px
-        color: #818D9A
-        height: 100%
-        border: 1px solid #D2DCE8
-        border-radius: 3px
-
-    > img
-      margin-left: 33rem
-      height: 100%
-      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%)

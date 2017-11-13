@@ -61,10 +61,18 @@ function initShrinkHeader() {
 function initSearchNavbarSecondary() {
   const $btn = document.querySelector('.nav-search-button');
   const $navbar = document.querySelector('.navbar-secondary .navbar');
+  const $input = document.querySelector('#nav-search-field input');
+
 
   if ($btn && $navbar) {
     $btn.addEventListener('click', () => {
       $navbar.classList.toggle('search');
+
+      if ($navbar.classList.contains('search')) {
+        $input.focus();
+      } else {
+        $input.blur();
+      }
     });
   }
 }
