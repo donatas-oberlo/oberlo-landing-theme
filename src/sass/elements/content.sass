@@ -55,6 +55,9 @@ a
   color: $link
   &:hover
     color: $brand
+  &.is-small
+    font-size: 0.875rem
+    line-height: 1.25rem
 
 a.read-more
   position: relative
@@ -86,6 +89,22 @@ p, span
     &.is-inverted
       color: #ffffff
 
+.list-separated
+  display: flex
+  a, span
+    position: relative
+    padding-right: 13px
+    margin-right: 7px
+    &::after
+      position: absolute
+      right: 0
+      content: "\2022"
+      font-size: 1.125rem
+      line-height: 1.125rem
+      color: $border
+    &:last-child
+      &::after
+        display: none
 
 
 
