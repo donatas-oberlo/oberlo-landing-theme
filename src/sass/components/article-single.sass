@@ -1,0 +1,101 @@
+.article-single
+  +until($tablet)
+    padding: 0 1rem
+  h1
+    margin: 10px 0 15px 0
+    +until($tablet)
+      margin: 0 0 10px 0
+  h3
+    margin: 50px 0 20px 0
+    +until($tablet)
+      margin: 40px 0 20px 0
+  blockquote
+    margin: 30px 0
+    +until($tablet)
+      margin: 20px 0
+  +until($tablet)
+    overflow: hidden
+  .article-info
+    a
+      font-size: 0.875rem
+      line-height: 1.25rem
+  figure
+    margin: 30px 0 50px 0
+    +until($tablet)
+      margin: 20px 0 30px 0
+    overflow: hidden
+  .article-content
+    padding: 0 45px 50px 45px
+    +until($tablet)
+      padding: 0
+    p:first-child
+      font-size: 1.375rem
+      line-height: 2rem
+    img
+      padding-bottom: 30px
+  .article-links-list
+    margin: 50px 0 60px 0
+    padding: 30px 0 40px 0
+    border-top: 1px solid $border
+    border-bottom: 1px solid $border
+    +until($tablet)
+      margin: 40px 0 40px 0
+      padding: 20px 0 20px 0
+    h4
+      margin-bottom: 15px
+    ul
+      li
+        padding: 5px 0 5px 15px
+        position: relative
+        &:before
+          position: absolute
+          content: "\2022"
+          left: 0
+          top: 0
+          color: $sub-text
+          font-size: 1.56rem
+        a
+          font-size: 1.125rem
+          line-height: 1.875rem
+  .featured
+    margin: 50px 0
+    border-left: 10px solid $brand
+    padding: 30px 0 30px 50px
+    +until($tablet)
+      border-top: 10px solid $brand
+      border-left: none
+      padding: 20px 0 0 0
+      margin: 30px 0 0 0
+    h5
+      margin-bottom: 10px
+    .read-more
+      margin-top: 30px
+      display: inline-block
+      +until($tablet)
+        margin-top: 20px
+
+.article-author
+  padding: 30px 0
+  +from($desktop)
+    padding: 50px 0
+    display: flex
+    justify-content: space-between
+  .article-author-info
+    p
+      font-size: 1rem
+    h4
+      margin-bottom: 15px
+  .article-author-image
+    margin-right: 30px
+    +until($tablet)
+      display: flex
+      align-items: center
+    img
+      width: 150px
+      border-radius: 100%
+      padding: 0
+      +until($tablet)
+        margin: 0 20px 10px 0
+        width: 75px
+        height: 75px
+
