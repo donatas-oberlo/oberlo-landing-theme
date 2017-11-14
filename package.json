@@ -6,11 +6,13 @@
   },
   "license": "ISC",
   "dependencies": {
-    "uglifyjs-webpack-plugin": "^1.0.1"
   },
   "description": "Oberlo landing theme",
   "devDependencies": {
     "autoprefixer": "^7.1.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
     "bulma": "^0.6.0",
     "compression-webpack-plugin": "^1.0.1",
     "css-loader": "^0.28.7",
@@ -19,12 +21,13 @@
     "postcss-cli": "^4.1.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.0.1",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
   },
   "directories": {},
   "scripts": {
-    "build:dev": "./node_modules/.bin/webpack --config webpack.config.js --progress --profile --colors --display-error-details --bail",
+    "build:dev": "./node_modules/.bin/webpack --config webpack.config.js --progress --hide-modules --profile --colors --display-error-details --bail",
     "build:prod": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.prod.config.js --progress --profile --colors --display-error-details --display-optimization-bailout --bail",
     "dev": "webpack-dev-server --inline --hot --config webpack.config.js"
   }
