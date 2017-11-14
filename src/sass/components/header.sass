@@ -32,7 +32,7 @@
       height: 2px
       margin-left: -0.5rem
       border-radius: 1px
-  +from($tablet)
+  +from($desktop)
     .navbar-item:first-child
       padding-left: 0
 
@@ -72,6 +72,16 @@
         line-height: 28px
         transition: color $speed $easing
 
+    #nav-search-item,
+    #show-all-articles
+      height: 3.75rem
+
+      .navbar-link,
+      .navbar-item,
+      input
+        line-height: 38px
+        height: 100%
+
     .has-dropdown
       .navbar-dropdown
         font-size: 1rem
@@ -96,7 +106,7 @@
       background-color: $white
       width: calc(150%)
       left: calc(-25%)
-      box-shadow: 0 5px 19px 1px rgba(0,0,0,0.09)
+      box-shadow: 0 5px 19px 1px rgba(0, 0, 0, 0.09)
       border-radius: 0
       padding-bottom: 1rem
       padding-top: 1rem
@@ -174,12 +184,13 @@
 
       .navbar-dropdown
         top: calc(100% + 22px)
+
 header
   .breadcrumb
     font-size: 14px
     line-height: 17px
     padding: 1rem
-    +from($tablet)
+    +from($desktop)
       padding-left: 0
 
     &.has-column-separator-separator
@@ -193,17 +204,22 @@ header
   outline: none
   font-size: 16px
   line-height: 28px
-  color: #818D9A
+  color: $text
   margin: 0
   width: 100%
 
+  &::-webkit-input-placeholder
+    color: $sub-text
+
+
 .nav-search-button
+  width: 2rem
   cursor: pointer
 
   .icon-search,
   .icon-close
     max-height: 100%
-    width: 1.5rem
+    width: 2.5rem
     transition: visibility 0s, opacity 1s linear
     position: absolute
 
@@ -219,7 +235,6 @@ header
 #nav-search-item
   .navbar-item
     display: flex
-    height: 100%
 
     input
       padding: 0.75rem 1.5rem 0.75rem 1.0rem
@@ -230,7 +245,7 @@ header
 
     img
       max-height: 100%
-      width: 1.5rem
+      width: 2.5rem
       margin-right: 0.7rem
 
 #nav-search-field
@@ -243,7 +258,8 @@ header
     height: 100%
 
     input
-      padding: 0 1rem
+      padding: 0 1rem 0 0
+
       +search-input
 
 .search

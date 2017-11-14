@@ -8,24 +8,29 @@
 
     > div
       width: 33rem
-      padding: 1.5rem 1rem
+      padding: 1.5rem 1rem 1.5rem 0
       height: 100%
       position: absolute
       display: flex
       justify-content: center
       flex-direction: column
 
-      > p.is-intro,
+      > p,
       > div.field
         padding-top: 1rem
+        padding-bottom: 0
+        margin-bottom: 0
 
       input
         font-size: 14px
         line-height: 20px
-        color: #818D9A
+        color: $text
         height: 100%
-        border: 1px solid #D2DCE8
+        border: 1px solid $border
         border-radius: 3px
+
+        &::-webkit-input-placeholder
+          color: $sub-text
 
     > .header-promo-image
       margin-left: 33rem
