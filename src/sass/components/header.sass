@@ -32,7 +32,7 @@
       height: 2px
       margin-left: -0.5rem
       border-radius: 1px
-  +from($tablet)
+  +from($desktop)
     .navbar-item:first-child
       padding-left: 0
 
@@ -49,9 +49,11 @@
       +arrow($navbar-dropdown-arrow)
 
     &:hover
-      .navbar-link,
-      .navbar-link::after
+      .navbar-link
         color: $brand
+
+      .navbar-link::after
+        border-bottom: 0.3125rem solid $brand
 
   // mobile
   +until($desktop)
@@ -69,6 +71,16 @@
         padding: 0.75rem 1.5rem 0.75rem 1.0rem
         line-height: 28px
         transition: color $speed $easing
+
+    #nav-search-item,
+    #show-all-articles
+      height: 3.75rem
+
+      .navbar-link,
+      .navbar-item,
+      input
+        line-height: 38px
+        height: 100%
 
     .has-dropdown
       .navbar-dropdown
@@ -94,7 +106,7 @@
       background-color: $white
       width: calc(150%)
       left: calc(-25%)
-      box-shadow: 0 5px 19px 1px rgba(0,0,0,0.09)
+      box-shadow: 0 5px 19px 1px rgba(0, 0, 0, 0.09)
       border-radius: 0
       padding-bottom: 1rem
       padding-top: 1rem
@@ -107,6 +119,9 @@
         display: block
         padding: 0.375rem 1rem
 
+      a.navbar-item:hover
+        color: $brand
+        background-color: inherit
 
 // Navbar primary
 .navbar-primary
@@ -169,12 +184,13 @@
 
       .navbar-dropdown
         top: calc(100% + 22px)
+
 header
   .breadcrumb
     font-size: 14px
     line-height: 17px
     padding: 1rem
-    +from($tablet)
+    +from($desktop)
       padding-left: 0
 
     &.has-column-separator-separator
@@ -188,16 +204,28 @@ header
   outline: none
   font-size: 16px
   line-height: 28px
-  color: #818D9A
+  color: $text
   margin: 0
   width: 100%
 
+  &::-webkit-input-placeholder
+    color: $sub-text
+
+
 .nav-search-button
+  width: 2rem
   cursor: pointer
 
-  img
+  .icon-search,
+  .icon-close
     max-height: 100%
-    width: 1.5rem
+    width: 2.5rem
+    transition: visibility 0s, opacity 1s linear
+    position: absolute
+
+  .icon-close
+    visibility: hidden
+    opacity: 0
 
 #all-articles
   visibility: visible
@@ -207,7 +235,6 @@ header
 #nav-search-item
   .navbar-item
     display: flex
-    height: 100%
 
     input
       padding: 0.75rem 1.5rem 0.75rem 1.0rem
@@ -218,7 +245,7 @@ header
 
     img
       max-height: 100%
-      width: 1.5rem
+      width: 2.5rem
       margin-right: 0.7rem
 
 #nav-search-field
@@ -231,7 +258,8 @@ header
     height: 100%
 
     input
-      padding: 0 1rem
+      padding: 0 1rem 0 0
+
       +search-input
 
 .search
@@ -244,3 +272,13 @@ header
     visibility: visible
     opacity: 1
     display: block
+
+  .nav-search-button
+    .icon-search
+      visibility: hidden
+      opacity: 0
+
+    .icon-close
+      visibility: visible
+      opacity: 1
+
