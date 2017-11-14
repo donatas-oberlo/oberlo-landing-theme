@@ -1,6 +1,14 @@
 .articles-list
+  +until($tablet)
+    overflow: hidden
+  +from($tablet)
+    padding: 50px 100px 120px 100px
+  +until($tablet)
+    padding: 30px 15px 30px 15px
   .article-meta
     padding: 15px 0 8px 0
+    +until($tablet)
+      padding: 10px 0 8px 0
     a
       font-size: 0.875rem
       line-height: 1.25rem
@@ -10,13 +18,28 @@
   .first-article
     .article-meta
       padding: 15px 0 10px 0
+      +until($tablet)
+        padding: 10px 0 8px 0
+  +until($tablet)
+    .pagination
+      padding-top: 10px
+      padding-bottom: 30px
+    .columns
+      .column:nth-child(2)
+        padding-top: 0
+        padding-bottom: 0
 
-  article figure.image
-    overflow: hidden
 
-  article .image a img
-    transition: all .3s
 
-  article .image a:hover img
-    transform: scale(1.1)
+
+  article
+    padding-bottom: 15px
+    +until($tablet)
+      padding-bottom: 0
+    figure.image
+      overflow: hidden
+    .image a img
+      transition: all .3s
+    .image a:hover img
+      transform: scale(1.1)
 
