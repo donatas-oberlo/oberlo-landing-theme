@@ -5,8 +5,7 @@
     "url": "http://www.oberlo.com"
   },
   "license": "ISC",
-  "dependencies": {
-  },
+  "dependencies": {},
   "description": "Oberlo landing theme",
   "devDependencies": {
     "autoprefixer": "^7.1.1",
@@ -24,6 +23,7 @@
     "style-loader": "^0.19.0",
     "uglifyjs-webpack-plugin": "^1.0.1",
     "webpack": "^3.8.1",
+    "webpack-dashboard": "^1.0.2",
     "webpack-dev-server": "^2.9.3"
   },
   "directories": {},
