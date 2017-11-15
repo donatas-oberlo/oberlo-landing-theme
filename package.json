@@ -5,8 +5,7 @@
     "url": "http://www.oberlo.com"
   },
   "license": "ISC",
-  "dependencies": {
-  },
+  "dependencies": {},
   "description": "Oberlo landing theme",
   "devDependencies": {
     "autoprefixer": "^7.1.1",
