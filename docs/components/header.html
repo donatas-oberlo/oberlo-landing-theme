@@ -35,6 +35,7 @@
       </div>
     </nav>
   </div>
+  {{#if showHeaderBanner}}
   <div class="header-promo is-hidden-touch">
     <div class="container">
       <div>
@@ -53,6 +54,7 @@
       <div class="header-promo-image"></div>
     </div>
   </div>
+  {{/if}}
   <div class="navbar-secondary">
     <nav class="container navbar">
       <div class="navbar-start is-hidden-desktop">
@@ -126,7 +128,7 @@
       </div>
     </nav>
   </div>
-
+  {{#if showBreadcrumbs}}
   <nav class="container breadcrumb has-column-separator-separator" aria-label="breadcrumbs">
     <ul>
       <li><a href="#">Blog</a></li>
@@ -134,4 +136,5 @@
       <li class="is-active"><a href="#" aria-current="page">Product Listing</a></li>
     </ul>
   </nav>
+  {{/if}}
 </header>
