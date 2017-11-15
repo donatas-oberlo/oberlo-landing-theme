@@ -1,31 +1,35 @@
 .pagination
-  display: flex
-  text-align: center
-  justify-content: center
   ul
+    display: flex
+    text-align: center
+    justify-content: center
     li
-      display: inline-block
       .current
+        display: block
         font-family: $family-strong
         font-size: 0.9375rem
         color: $brand
-        padding: 5px 12px
+        padding: 1px 12px
       a
         display: block
+        height: 32px
         font-size: 0.9375rem
         color: $sub-text
-        padding: 5px
-        margin: 0 7px
+        padding: 5px 12px
         &:hover
           color: $brand
         &.prev, &.next
           position: relative
           font-size: 1rem
+          margin-top: -1px
           &:after
             +arrow-after($sub-text, 45deg)
         &.next
           &:after
             transform: rotate(-135deg)
+        &.prev
+          &:after
+            left: 0
         &.prev:hover, &.next:hover
           &:after
             border-color: $brand
