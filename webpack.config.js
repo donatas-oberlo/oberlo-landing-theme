@@ -1,6 +1,5 @@
 const path = require('path');
 const HandlebarsPlugin = require('handlebars-webpack-plugin');
-const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   entry: {
@@ -42,7 +41,6 @@ module.exports = {
         path.join(process.cwd(), 'docs', 'components', '*.html'),
       ],
     }),
-    new DashboardPlugin(),
   ],
 
   devServer: {
