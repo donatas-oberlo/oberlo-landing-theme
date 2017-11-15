@@ -59,7 +59,8 @@
   +until($desktop)
     .navbar-menu
       padding: 0
-      border-bottom: 2px solid $border
+      border-top: 1px solid $border
+      border-bottom: 1px solid $border
       box-shadow: none
 
     .navbar-start,
@@ -133,6 +134,7 @@
   background-color: $white
   z-index: 30
   transition: height 0.3s
+  border-bottom: 1px solid $border
 
   // mobile
   +until($desktop)
@@ -143,19 +145,61 @@
       > div > a.navbar-link
         border-bottom: 1px solid $border
 
+    .navbar-action-button
+      padding: 0
+
+      button
+        padding: 0.5rem 1rem
+        width: 100%
+        text-align: left
+        border-radius: 0
+
+    .navbar-backdrop
+      position: fixed
+      background-color: $white
+      bottom: 0
+      top: 0
+      right: 0
+      left: 0
+      z-index: -1
+
   // desktop
   +from($desktop)
+    .navbar-action-button
+      transition: width 0.3s linear, padding 0.3s linear
+      width: 12rem
+      overflow: hidden
+      white-space: nowrap
+
+      button
+        transition: opacity 0.6s ease
+        opacity: 1
+
     &.expanded
-      height: 94px
+      height: 6rem
+      border-bottom: none
+
+      .navbar-action-button
+        width: 0
+        padding: 0
+
+        button
+          opacity: 0
 
 // Navbar secondary
 .navbar-secondary
   // mobile
   +until($desktop)
+    transition: border 0s, opacity 0.3s linear
     border-bottom: 1px solid $border
 
-    .navbar-start
+    #nav-search-item
       border-top: 1px solid $border
+      border-bottom: 1px solid $border
+
+      img
+        width: 1.5rem
+        margin-right: 1.1rem
 
     .navbar-item
       padding: 0
@@ -202,15 +246,21 @@ header
   border: none
   box-shadow: none
   outline: none
-  font-size: 16px
-  line-height: 28px
+  line-height: 32px
+  font-size: 21px
   color: $text
   margin: 0
   width: 100%
 
   &::-webkit-input-placeholder
-    color: $sub-text
+    color: $text
 
+  +until($desktop)
+    line-height: 28px
+    font-size: 16px
+
+    &::-webkit-input-placeholder
+      color: $sub-text
 
 .nav-search-button
   width: 2rem
@@ -220,7 +270,7 @@ header
   .icon-close
     max-height: 100%
     width: 2.5rem
-    transition: visibility 0s, opacity 1s linear
+    transition: visibility 0s, opacity 0.3s linear
     position: absolute
 
   .icon-close
@@ -230,29 +280,28 @@ header
 #all-articles
   visibility: visible
   opacity: 1
-  transition: visibility 0s, opacity 1s linear
+  transition: visibility 0s, opacity 0.3s linear
 
 #nav-search-item
-  .navbar-item
-    display: flex
+  display: flex
 
-    input
-      padding: 0.75rem 1.5rem 0.75rem 1.0rem
-      line-height: 28px
-      flex: 1
+  input
+    padding: 0.75rem 1.5rem 0.75rem 1.0rem
+    line-height: 28px
+    flex: 1
 
-      +search-input
+    +search-input
 
-    img
-      max-height: 100%
-      width: 2.5rem
-      margin-right: 0.7rem
+  img
+    max-height: 100%
+    width: 2.5rem
+    margin-right: 0.7rem
 
 #nav-search-field
   flex: 1
   visibility: hidden
   opacity: 0
-  transition: visibility 0s, opacity 1s linear
+  transition: visibility 0s, opacity 0.3s linear
 
   .navbar-item
     height: 100%
@@ -263,6 +312,9 @@ header
       +search-input
 
 .search
+  &.navbar-secondary
+    border-bottom: 1px solid $text
+
   #all-articles
     position: absolute
     opacity: 0
