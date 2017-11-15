@@ -1,15 +1,15 @@
 .articles-list
   a
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6
-    color: $content-heading-color
-    &:hover
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
       color: $content-heading-color
-      text-decoration: underline
+      &:hover
+        color: $content-heading-color
+        text-decoration: underline
   +until($tablet)
     overflow: hidden
   +from($tablet)
@@ -43,13 +43,13 @@
         padding-bottom: 0
 
   article
-    padding-bottom: 15px
+    padding-bottom: 25px
     +until($tablet)
       padding-bottom: 0
     figure.image
       overflow: hidden
     .image a img
-      transition: all .3s
+      transition: all .4s
     .image a:hover img
       transform: scale(1.1)
 
