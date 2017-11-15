@@ -60,7 +60,7 @@ function initShrinkHeader() {
 
 function initSearchNavbarSecondary() {
   const $btn = document.querySelector('.nav-search-button');
-  const $navbar = document.querySelector('.navbar-secondary .navbar');
+  const $navbar = document.querySelector('.navbar-secondary');
   const $input = document.querySelector('#nav-search-field input');
 
 
