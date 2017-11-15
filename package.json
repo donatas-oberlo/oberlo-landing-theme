@@ -17,6 +17,7 @@
     "compression-webpack-plugin": "^1.0.1",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
+    "handlebars-webpack-plugin": "^1.3.0",
     "node-sass": "^4.5.3",
     "postcss-cli": "^4.1.0",
     "sass-loader": "^6.0.6",
@@ -29,6 +30,6 @@
   "scripts": {
     "build:dev": "./node_modules/.bin/webpack --config webpack.config.js --progress --hide-modules --profile --colors --display-error-details --bail",
     "build:prod": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.prod.config.js --progress --profile --colors --display-error-details --display-optimization-bailout --bail",
-    "dev": "webpack-dev-server --inline --hot --config webpack.config.js"
+    "dev": "webpack-dev-server --inline --hot --config webpack.config.js --content-base ./dist/dev"
   }
 }

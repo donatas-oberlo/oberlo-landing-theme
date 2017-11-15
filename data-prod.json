@@ -1,0 +1,4 @@
+{
+  "prod": true,
+  "root":"/dist/prod"
+}

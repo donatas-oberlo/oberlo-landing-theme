@@ -1,0 +1,12 @@
+@font-face {
+    font-family: ProximaNova-Bold;
+    src: url('/assets/webfonts/350D6A_0_unhinted_0.eot');
+    src: url('/assets/webfonts/350D6A_0_unhinted_0.eot?#iefix') format('embedded-opentype'),url('/assets/webfonts/350D6A_0_unhinted_0.woff2') format('woff2'),url('/assets/webfonts/350D6A_0_unhinted_0.woff') format('woff'),url('/assets/webfonts/350D6A_0_unhinted_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: ProximaNova-Regular;
+    src: url('/assets/webfonts/350D6A_1_unhinted_0.eot');
+    src: url('/assets/webfonts/350D6A_1_unhinted_0.eot?#iefix') format('embedded-opentype'),url('/assets/webfonts/350D6A_1_unhinted_0.woff2') format('woff2'),url('/assets/webfonts/350D6A_1_unhinted_0.woff') format('woff'),url('/assets/webfonts/350D6A_1_unhinted_0.ttf') format('truetype');
+}
+
