@@ -36,7 +36,7 @@ module.exports = {
   plugins: [
     new HandlebarsPlugin({
       // path to hbs entry file(s)
-      entry: path.join(process.cwd(), 'docs', 'pages', '*.html'),
+      entry: path.join(process.cwd(), 'docs', 'pages', '**', '*.html'),
       // output path and filename(s)
       // if ommited, the input filepath stripped of its extension will be used
       output: path.join(process.cwd(), 'dist/prod', '[name].html'),
