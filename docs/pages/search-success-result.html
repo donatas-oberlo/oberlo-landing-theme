@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="expandable">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Articles list</title>
+  {{#if prod}}
+  <link rel="stylesheet" href="{{root}}/styles.css" type="text/css">
+  {{/if}}
+</head>
+<body>
+{{> components/header expanded="true" }}
+<div class="container articles-list">
+  <h1>Search results: Design</h1>
+  <div class="columns">
+    <div class="column">
+      {{> components/articles-item img="https://placeimg.com/350/180/nature" title="Ecommerce Roadmap: How to Start Ecommerce Business That Will Succeed"}}
+    </div>
+    <div class="column">
+      {{> components/articles-item img="https://placeimg.com/350/180/nature" title="Ecommerce Roadmap: How to Start Ecommerce Business That Will Succeed"}}
+    </div>
+    <div class="column">
+      {{> components/articles-item img="https://placeimg.com/350/180/nature" title="Ecommerce Roadmap: How to Start Ecommerce Business That Will Succeed"}}
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      {{> components/articles-item img="https://placeimg.com/350/180/arch" title="Ecommerce Roadmap: How to Start Ecommerce Business That Will Succeed"}}
+    </div>
+    <div class="column">
+      {{> components/articles-item img="https://placeimg.com/350/180/tech" title="Email Marketing 101: A Cheat Sheet for Email Marketing That Works"}}
+    </div>
+    <div class="column">
+      {{> components/articles-item img="https://placeimg.com/350/180/nature" title="Ecommerce Roadmap: How to Start Ecommerce Business That Will Succeed"}}
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      {{> components/articles-item img="https://placeimg.com/350/180/arch" title="Ecommerce Roadmap: How to Start Ecommerce Business That Will Succeed"}}
+    </div>
+    <div class="column">
+      {{> components/articles-item img="https://placeimg.com/350/180/tech" title="Email Marketing 101: A Cheat Sheet for Email Marketing That Works"}}
+    </div>
+    <div class="column">
+      {{> components/articles-item img="https://placeimg.com/350/180/nature" title="Ecommerce Roadmap: How to Start Ecommerce Business That Will Succeed"}}
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      {{> components/articles-item img="https://placeimg.com/350/180/arch" title="Ecommerce Roadmap: How to Start Ecommerce Business That Will Succeed"}}
+    </div>
+    <div class="column">
+      {{> components/articles-item img="https://placeimg.com/350/180/tech" title="Email Marketing 101: A Cheat Sheet for Email Marketing That Works"}}
+    </div>
+    <div class="column">
+      {{> components/articles-item img="https://placeimg.com/350/180/nature" title="Ecommerce Roadmap: How to Start Ecommerce Business That Will Succeed"}}
+    </div>
+  </div>
+  <div class="pagination">
+    <ul>
+      <li><a class="prev page-numbers" href="https://www.oberlo.com/blog/page/2" data-wpel-link="internal"></a></li>
+      <li><a class="page-numbers" href="https://www.oberlo.com/blog/page/1" data-wpel-link="internal">1</a></li>
+      <li><a class="page-numbers" href="https://www.oberlo.com/blog/page/2" data-wpel-link="internal">2</a></li>
+      <li><span class="page-numbers current">3</span></li>
+      <li><a class="page-numbers" href="https://www.oberlo.com/blog/page/4" data-wpel-link="internal">4</a></li>
+      <li><a class="page-numbers" href="https://www.oberlo.com/blog/page/5" data-wpel-link="internal">5</a></li>
+      <li><span class="page-numbers dots">…</span></li>
+      <li><a class="page-numbers" href="https://www.oberlo.com/blog/page/21" data-wpel-link="internal">105</a></li>
+      <li><a class="next page-numbers" href="https://www.oberlo.com/blog/page/4" data-wpel-link="internal"></a></li>
+    </ul>
+  </div>
+</div>
+<div class="cta">
+  <h2 class="is-inverted">Start using Oberlo today</h2>
+  <p class="is-inverted">All accounts have access to the forever free Starter Plan</p>
+  <a class="button is-default is-inverted" href="#">Sign Up Free</a>
+</div>
+{{> components/footer}}
+<script src="{{root}}/bundle.js"></script>
+</body>
+</html>
