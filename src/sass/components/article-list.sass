@@ -8,7 +8,6 @@
     p
       padding-bottom: 1rem
 
-
   a
     h1,
     h2,
@@ -51,6 +50,8 @@
     .columns
       margin-top: -30px
       .column
+        +until($tablet)
+          padding: 0.75rem
         padding-top: 30px
         padding-bottom: 30px
       .column:nth-child(2)
