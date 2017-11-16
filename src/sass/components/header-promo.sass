@@ -8,8 +8,7 @@
 
     > div
       width: 33rem
-      padding: 1.5rem 1rem 1.5rem 0
-      height: 100%
+      padding: 2.5rem 1rem 0 0
       position: absolute
       display: flex
       justify-content: center
@@ -21,16 +20,56 @@
         padding-bottom: 0
         margin-bottom: 0
 
-      input
-        font-size: 14px
-        line-height: 20px
-        color: $text
-        height: 100%
-        border: 1px solid $border
-        border-radius: 3px
+      .field
+        *:focus
+          outline: none
 
-        &::-webkit-input-placeholder
-          color: $sub-text
+        input
+          font-size: 14px
+          line-height: 20px
+          color: transparent
+          height: 100%
+          border: 1px solid $border
+          border-radius: 3px
+          transition: all .2s
+
+        label
+          font-size: 14px
+          line-height: 20px
+          color: $text
+          position: absolute
+          transition: all .2s
+
+          margin-top: -30px
+          margin-left: 8px
+
+        &.is-active
+          input
+            line-height: 14px
+            font-size: 14px
+            color: #18222E
+            padding: 16px 0 0 10px
+
+          label
+            font-size: 10px
+            line-height: 10px
+            margin-top: -36px
+            color: #818D9A
+            margin-left: 10px
+
+        &.is-invalid
+          input
+            border: 1px solid #F97442
+
+      .invalid-feedback
+        display: none
+        margin-top: 0.25rem
+        line-height: 20px
+        font-size: 13px
+        color: #F55D34
+
+      .field.is-invalid ~.invalid-feedback
+        display: block
 
     > .header-promo-image
       margin-left: 33rem
