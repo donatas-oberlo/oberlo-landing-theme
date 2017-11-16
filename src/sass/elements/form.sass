@@ -1,0 +1,51 @@
+.field
+  input
+    font-size: 14px
+    line-height: 20px
+    color: transparent
+    height: 100%
+    box-shadow: none
+    border: 1px solid $border
+    border-radius: 3px
+    transition: all .2s
+  &:focus
+    outline: none
+
+  label
+    font-size: 14px
+    line-height: 20px
+    color: $sub-text
+    position: absolute
+    transition: all .2s
+
+    margin-top: -30px
+    margin-left: 8px
+
+  &.is-active
+    input
+      line-height: 14px
+      font-size: 14px
+      color: #18222E
+      padding: 16px 0 0 10px
+      box-shadow: none
+
+    label
+      font-size: 10px
+      line-height: 10px
+      margin-top: -36px
+      color: #818D9A
+      margin-left: 10px
+
+  &.is-invalid
+    input
+      border: 1px solid #F97442
+
+.invalid-feedback
+  display: none
+  margin-top: 0.25rem
+  line-height: 20px
+  font-size: 13px
+  color: #F55D34
+
+.field.is-invalid ~.invalid-feedback
+  display: block

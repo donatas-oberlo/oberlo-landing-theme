@@ -5,7 +5,7 @@ function validateEmail(email) {
 }
 
 function initInput() {
-  const $input = document.querySelector('.header-promo input');
+  const $input = document.querySelector('.field input');
 
   if ($input) {
     function validateField(ev = {}) {
