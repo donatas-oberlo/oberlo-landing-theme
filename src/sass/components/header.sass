@@ -10,7 +10,10 @@
 // desktop
 +from($desktop)
   html
-    padding-top: 94px
+    padding-top: 60px
+
+    &.expandable
+      padding-top: 6rem
 
 // Navbar
 .navbar
@@ -33,7 +36,9 @@
       margin-left: -0.5rem
       border-radius: 1px
   +from($desktop)
-    .navbar-item:first-child
+    .navbar-item:first-child,
+    #all-articles > div:first-of-type,
+    #all-articles > div:first-of-type a
       padding-left: 0
 
   .navbar-item,
@@ -148,7 +153,7 @@
     .navbar-action-button
       padding: 0
 
-      button
+      .button
         padding: 0.5rem 1rem
         width: 100%
         text-align: left
@@ -167,11 +172,11 @@
   +from($desktop)
     .navbar-action-button
       transition: width 0.3s linear, padding 0.3s linear
-      width: 12rem
+      width: 11rem
       overflow: hidden
       white-space: nowrap
 
-      button
+      .button
         transition: opacity 0.6s ease
         opacity: 1
 
@@ -183,7 +188,7 @@
         width: 0
         padding: 0
 
-        button
+        .button
           opacity: 0
 
 // Navbar secondary

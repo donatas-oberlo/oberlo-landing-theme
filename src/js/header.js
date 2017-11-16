@@ -46,11 +46,11 @@ function getCurrentScroll() {
 }
 
 function initShrinkHeader() {
-  const shrinkHeader = 94;
+  const shrinkHeader = 120;
   const $header = document.querySelector('.navbar-primary');
 
-  if ($header) {
-    window.addEventListener('scroll', function(e) {
+  if ($header && document.body.parentElement.classList.contains('expandable')) {
+    window.addEventListener('scroll', function() {
       const scroll = getCurrentScroll();
 
       $header.classList.toggle('expanded', scroll < shrinkHeader);

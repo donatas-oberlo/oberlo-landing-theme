@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="expandable">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Articles list</title>
+  {{#if prod}}
+  <link rel="stylesheet" href="{{root}}/styles.css" type="text/css">
+  {{/if}}
+</head>
+<body>
+{{> components/header expanded="true" }}
+<div class="container articles-list not-found">
+  <h1>Ooops!</h1>
+  <p>Sorry, but we could not find any results.<br/>
+    Please visit our blog home page to find articles you might be interested in.
+  </p>
+  <a class="button is-default" href="#">Go Back</a>
+</div>
+<div class="cta">
+  <h2 class="is-inverted">Start using Oberlo today</h2>
+  <p class="is-inverted">All accounts have access to the forever free Starter Plan</p>
+  <a class="button is-default is-inverted" href="#">Sign Up Free</a>
+</div>
+{{> components/footer}}
+<script src="{{root}}/bundle.js"></script>
+</body>
+</html>
