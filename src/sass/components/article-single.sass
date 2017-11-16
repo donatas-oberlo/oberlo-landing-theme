@@ -1,6 +1,6 @@
 .article-single
   +until($tablet)
-    padding: 0 1rem
+    padding: 30px 1rem 0 1rem
   h1
     margin: 10px 0 15px 0
     +until($tablet)
@@ -13,8 +13,8 @@
     margin: 40px 0
     +until($tablet)
       margin: 20px 0
-  +until($tablet)
-    overflow: hidden
+      font-size: 1.375rem
+      line-height: 1.75rem
   .article-info
     a
       font-size: 0.875rem
@@ -27,10 +27,13 @@
   .article-content
     padding: 0 45px 50px 45px
     +until($tablet)
-      padding: 0
+      padding: 0 0 30px 0
     p:first-child
       font-size: 1.375rem
       line-height: 2rem
+      +until($tablet)
+        font-size: 1.125rem
+        line-height: 1.875rem
     img
       padding-bottom: 30px
   .article-links-list
@@ -39,8 +42,7 @@
     border-top: 1px solid $border
     border-bottom: 1px solid $border
     +until($tablet)
-      margin: 40px 0 40px 0
-      padding: 20px 0 20px 0
+      margin: 40px 0
     h4
       margin-bottom: 15px
     ul
