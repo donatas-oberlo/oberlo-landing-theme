@@ -1,6 +1,9 @@
 .article-single
-  +until($tablet)
+  +until($desktop)
     padding: 30px 1rem 0 1rem
+  +until($tablet)
+    .column
+      padding: 0.75rem
   h1
     margin: 10px 0 15px 0
     +until($tablet)

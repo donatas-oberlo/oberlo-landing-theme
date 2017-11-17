@@ -1,0 +1,19 @@
+.sticky-social-icons-wrapper
+  position: fixed
+  left: 60px
+  +until($desktop)
+    display: none
+  .sticky-social-icons
+    a
+      display: flex
+      align-items: center
+      justify-content: center
+      background: $brand
+      border-radius: 100%
+      width: 38px
+      height: 38px
+      margin-bottom: 10px
+      svg
+        height: 32px
+        width: 32px
+        fill: #fff

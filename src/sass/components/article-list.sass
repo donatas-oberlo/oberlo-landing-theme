@@ -8,7 +8,6 @@
     p
       padding-bottom: 1rem
 
-
   a
     h1,
     h2,
@@ -26,7 +25,7 @@
       font-size: 1.375rem
       line-height: 1.75rem
   +from($tablet)
-    padding: 50px 0 120px 0
+    padding: 50px 15px 120px 15px
   .article-meta
     padding: 15px 0 8px 0
     +until($tablet)
@@ -51,6 +50,8 @@
     .columns
       margin-top: -30px
       .column
+        +until($tablet)
+          padding: 0.75rem
         padding-top: 30px
         padding-bottom: 30px
       .column:nth-child(2)

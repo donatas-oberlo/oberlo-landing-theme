@@ -1,11 +1,13 @@
 import initHeader from './src/js/header';
-import initHeaderPromo from './src/js/header-promo';
-import './src/js/footer';
+import initSubscribeInput from './src/js/subscribe-input';
+import initFooterMenu from './src/js/footer';
+
 
 import './src/sass/styles.sass';
 
 /* On page load */
 document.addEventListener('DOMContentLoaded', function () {
   initHeader();
-  initHeaderPromo();
+  initSubscribeInput();
+  initFooterMenu();
 });
