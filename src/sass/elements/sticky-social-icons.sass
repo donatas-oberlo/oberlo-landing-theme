@@ -1,6 +1,8 @@
 .sticky-social-icons-wrapper
   position: fixed
   left: 60px
+  +until($desktop)
+    display: none
   .sticky-social-icons
     a
       display: flex
