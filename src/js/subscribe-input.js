@@ -1,11 +1,12 @@
 function validateEmail(email) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-  return re.test(email);
+  return email === '' ? true : re.test(email);
 }
 
 function initInput() {
   const $input = document.querySelector('.field input');
+  const $label = document.querySelector('.field label');
 
   if ($input) {
     function validateField(ev = {}) {
@@ -23,9 +24,15 @@ function initInput() {
       }
     }
 
+    function makeInputActive() {
+      $input.parentNode.parentNode.classList.add('is-active');
+      $input.focus();
+    }
+
     $input.addEventListener('focus', validateField);
     $input.addEventListener('input', validateField);
     $input.addEventListener('blur', validateField);
+    $label.addEventListener('click', makeInputActive);
 
     validateField();
   }

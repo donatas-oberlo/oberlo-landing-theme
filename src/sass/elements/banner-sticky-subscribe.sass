@@ -6,13 +6,26 @@
   width: 100%
   border: 1px solid $border
   background: #ffffff
+  +until($tablet)
+    display: none
   .container
     height: 100%
     display: flex
     justify-content: space-between
     align-items: center
+  .close-wrapper
+    display: flex
+    align-items: center
+    margin-left: 60px
+    a
+      display: block
+      img
+        vertical-align: top
+        width: 100%
   .form-wrapper
     display: flex
+    .field
+      margin: 0
     input
       width: 300px
 
