@@ -1,9 +1,9 @@
 .footer
   background: $color-footer
   color: $sub-text
-  padding-top: 70px
+  padding-top: rem(70px)
   +until($tablet)
-    padding: 30px
+    padding: $space-s $space-xs
   a
     transition: color $speed $easing
     &:hover
@@ -20,12 +20,12 @@
 
     h6
       +from($tablet)
-        padding-bottom: 15px
+        padding-bottom: $space-xs
     ul
       +until($tablet)
         display: none
       li
-        font-size: 0.875rem
+        font-size: rem(14px)
         padding: 10px 0
         a
           color: $sub-text
@@ -35,7 +35,7 @@
 +until($tablet)
   .footer-menu.is-active
     h6
-      padding-bottom: 15px
+      padding-bottom: $space-xs
     ul
       display: block
     .footer-menu-title:after
@@ -49,11 +49,11 @@
   margin-left: -15px
 
 .footer-social-icons
-  margin-top: 40px
+  margin-top: $space-m
   +until($tablet)
     display: flex
-    margin-top: 30px
-    margin-bottom: 10px
+    margin-top: $space-mob-m
+    margin-bottom: $space-xs
     justify-content: space-evenly
   li
     display: inline-block
@@ -69,27 +69,27 @@
     height: 32px
 
 .footer-bottom-row
-  margin-top: 20px
-  padding-top: 10px
+  margin-top: $space-sec-s
+  padding-top: $space-sec-xs
   +until($tablet)
-    padding-bottom: 10px
-    padding-top: 20px
+    padding-bottom: $space-sec-xs
+    padding-top: $space-sec-s
     div
-      padding-bottom: 10px
+      padding-bottom: $space-sec-xs
   +from($tablet)
-    padding-top: 20px
-    margin-top: 50px
+    padding-top: $space-sec-s
+    margin-top: $space-l
     display: flex
     justify-content: space-between
     align-items: center
     border-top: 1px solid $color-footer-border
   a
-    font-size: 0.875rem
+    font-size: rem(14px)
     color: $sub-text
     &:first-child
-      margin-right: 20px
+      margin-right: $space-sec-s
     &:last-child
-      margin-left: 20px
+      margin-left: $space-sec-s
   div:last-child
     +from($tablet)
       text-align: right

@@ -1,53 +1,28 @@
 .article-single
   +until($desktop)
-    padding: 30px 1rem 0 1rem
-  +until($tablet)
-    .column
-      padding: 0.75rem
-  h1
-    margin: 10px 0 15px 0
-    +until($tablet)
-      margin: 0 0 10px 0
-  h3
-    margin: 50px 0 30px 0
-    +until($tablet)
-      margin: 40px 0 20px 0
-  blockquote
-    margin: 40px 0
-    +until($tablet)
-      margin: 20px 0
-      font-size: 1.375rem
-      line-height: 1.75rem
+    padding: $space-s $space-xs 0 $space-xs
   .article-info
     a
-      font-size: 0.875rem
-      line-height: 1.25rem
+      +is-small-text
   figure
-    margin: 30px 0 50px 0
-    +until($tablet)
-      margin: 20px 0 30px 0
     overflow: hidden
+    +content-elements-spacing
   .article-content
-    padding: 0 45px 50px 45px
-    +until($tablet)
-      padding: 0 0 30px 0
+    padding: 0 $space-m $space-l $space-m
+    +until($desktop)
+      padding: 0 0 $space-mob-l 0
     p:first-child
-      font-size: 1.375rem
-      line-height: 2rem
-      +until($tablet)
-        font-size: 1.125rem
-        line-height: 1.875rem
+      +is-intro-text
     img
-      padding-bottom: 30px
+      padding-bottom: $space-m
+
   .article-links-list
-    margin: 50px 0
-    padding: 30px 0
+    margin: $space-l 0
+    padding: $space-sec-l 0
     border-top: 1px solid $border
     border-bottom: 1px solid $border
     +until($tablet)
-      margin: 40px 0
-    h4
-      margin-bottom: 15px
+      margin: $space-mob-l 0
     ul
       li
         padding: 5px 0 5px 20px
@@ -63,35 +38,31 @@
           font-size: 1.125rem
           line-height: 1.875rem
   .featured
-    margin: 50px 0
+    margin: $space-l 0
     border-left: 10px solid $brand
-    padding: 30px 0 30px 50px
+    padding: $space-s 0 $space-s $space-l
     +until($tablet)
       border-top: 10px solid $brand
       border-left: none
-      padding: 20px 0 0 0
-      margin: 30px 0 0 0
-    h5
-      margin-bottom: 10px
+      padding: $space-mob-s 0 0 0
+      margin: $space-mob-l 0 0 0
     .read-more
-      margin-top: 30px
+      margin-top: $space-s
       display: inline-block
       +until($tablet)
-        margin-top: 20px
+        margin-top: $space-mob-s
 
 .article-author
-  padding: 30px 0
+  padding: $space-s 0
   +from($desktop)
-    padding: 50px 0
+    padding: $space-l 0
     display: flex
     justify-content: space-between
   .article-author-info
     p
       font-size: 1rem
-    h4
-      margin-bottom: 15px
   .article-author-image
-    margin-right: 30px
+    margin-right: $space-s
     +until($tablet)
       display: flex
       align-items: center
