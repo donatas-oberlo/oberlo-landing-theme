@@ -1,66 +1,38 @@
 .articles-list
-  h1
-    padding: 0 0 32px 0
-    margin-top: -10px
-
+  +page-spacing
+  +until($tablet)
+    .column.is-two-thirds
+      padding-bottom: $column-gap * 2 //one column is hidden
   a
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6
+    h1, h2, h3, h4, h5,h6
       color: $content-heading-color
+      margin-bottom: 0
       &:hover
         color: $content-heading-color
         text-decoration: underline
-  &.not-found
-    h1,
-    p
-      padding-bottom: 1rem
-  +until($tablet)
-    padding: 30px 15px 30px 15px
-    h4
+  &.search-results, &.not-found
+    h1
+      margin-bottom: $space-xs
+  +until($desktop)
+    h2
       font-size: 1.375rem
       line-height: 1.75rem
-  +from($tablet)
-    padding: 50px 15px 120px 15px
   .article-meta
-    padding: 15px 0 8px 0
-    +until($tablet)
-      padding: 15px 0 8px 0
+    padding: $space-xs 0 $space-sec-xs 0
     a
-      font-size: 0.875rem
-      line-height: 1.25rem
+      +is-small-text
   a.read-more
     display: inline-block
     margin-top: 5px
 
   .first-article
     .article-meta
-      padding: 15px 0 10px 0
-      +until($tablet)
-        padding: 15px 0 8px 0
+      padding: $space-xs 0 $space-sec-xs 0
   +until($tablet)
     .pagination
-      padding-top: 10px
-      padding-bottom: 30px
-
-    .columns
-      margin-top: -30px
-      .column
-        +until($tablet)
-          padding: 0.75rem
-        padding-top: 30px
-        padding-bottom: 30px
-      .column:nth-child(2)
-        padding-top: 0
-        padding-bottom: 0
-
+      padding-top: $space-sec-xs
+      padding-bottom: $space-s
   article
-    padding-bottom: 25px
-    +until($tablet)
-      padding-bottom: 0
     figure.image
       overflow: hidden
     .image a img

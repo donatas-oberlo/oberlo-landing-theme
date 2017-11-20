@@ -1,20 +1,21 @@
 .article-single
-  +until($desktop)
-    padding: $space-s $space-xs 0 $space-xs
+  +page-spacing
+  padding-top: 0 //breadcrumbs
   .article-info
     a
       +is-small-text
   figure
     overflow: hidden
     +content-elements-spacing
+    margin-top: $space-s
   .article-content
-    padding: 0 $space-m $space-l $space-m
+    padding: 0 $space-m 0 $space-m
     +until($desktop)
-      padding: 0 0 $space-mob-l 0
+      padding: 0
     p:first-child
       +is-intro-text
     img
-      padding-bottom: $space-m
+      padding-bottom: $space-s
 
   .article-links-list
     margin: $space-l 0
@@ -38,7 +39,7 @@
           font-size: 1.125rem
           line-height: 1.875rem
   .featured
-    margin: $space-l 0
+    margin: $space-m 0
     border-left: 10px solid $brand
     padding: $space-s 0 $space-s $space-l
     +until($tablet)
@@ -53,7 +54,9 @@
         margin-top: $space-mob-s
 
 .article-author
-  padding: $space-s 0
+  padding: $space-s
+  margin-top: $space-l
+  border-top: 1px solid $border
   +from($desktop)
     padding: $space-l 0
     display: flex
