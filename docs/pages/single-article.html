@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="expandable">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +9,11 @@
   {{/if}}
 </head>
 <body>
-{{> components/header showBreadcrumbs="true"}}
+{{> components/header showBreadcrumbs="true" expanded="true"}}
 <div class="container article-single">
   <div class="columns">
     <div class="column is-two-thirds">
-      <div class="sticky-social-icons-wrapper hide">
+      <div class="sticky-social-icons-wrapper">
         <ul class="sticky-social-icons">
           <li>
             <a href="#">
@@ -38,15 +38,8 @@
           </li>
           <li>
             <a href="#">
-              <svg class="icon icon-youtube">
-                <use xlink:href="/assets/symbol-defs.svg#icon-youtube"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <svg class="icon icon-instagram">
-                <use xlink:href="/assets/symbol-defs.svg#icon-instagram"></use>
+              <svg class="icon icon-pinterest">
+                <use xlink:href="/assets/symbol-defs.svg#icon-pinterest"></use>
               </svg>
             </a>
           </li>
