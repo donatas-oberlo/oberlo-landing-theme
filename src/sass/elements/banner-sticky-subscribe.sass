@@ -6,6 +6,9 @@
   width: 100%
   border: 1px solid $border
   background: #ffffff
+  padding: 0 $space-m
+  +until($desktop)
+    padding: 0 $space-mob-m
   +until($tablet)
     display: none
   .container
@@ -16,7 +19,9 @@
   .close-wrapper
     display: flex
     align-items: center
-    margin-left: 60px
+    margin-left: $space-l
+    +until(900px)
+      margin-left: $space-s
     a
       display: block
       img
@@ -28,4 +33,6 @@
       margin: 0
     input
       width: 300px
+      +until(900px)
+        width: 200px
 
