@@ -28,6 +28,14 @@ function initStickySubscribe() {
   });
 }
 
+function initMobileSubscribe() {
+  const subscribeBtn = document.querySelector('js-mobile-subscribe');
+  subscribeBtn.addEventListener('click', (event) => {
+
+    event.preventDefault();
+  });
+}
+
 function initFooter() {
   initFooterMenu();
   initStickySubscribe();
