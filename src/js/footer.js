@@ -1,4 +1,4 @@
-function initFooterMenu () {
+function initFooterMenu() {
   const menuTitles = document.querySelectorAll('a.footer-menu-title');
 
   menuTitles.forEach(title => title.addEventListener('click', (event) => {
@@ -11,4 +11,26 @@ function initFooterMenu () {
   }));
 }
 
-export default initFooterMenu;
+function initStickySubscribe() {
+  const stickyMenu = document.querySelector('.sticky-subscribe-banner');
+  const closeBtn = stickyMenu.querySelector('.icon-close');
+  const showThreshold = 300;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > showThreshold) {
+      stickyMenu.style.display = 'block';
+    } else {
+      stickyMenu.style.display = 'none';
+    }
+  });
+  closeBtn.addEventListener('click', (event) => {
+    stickyMenu.style.display = 'none';
+    event.preventDefault();
+  });
+}
+
+function initFooter() {
+  initFooterMenu();
+  initStickySubscribe();
+}
+
+export default initFooter;

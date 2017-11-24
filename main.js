@@ -1,6 +1,6 @@
 import initHeader from './src/js/header';
 import initSubscribeInput from './src/js/subscribe-input';
-import initFooterMenu from './src/js/footer';
+import initFooter from './src/js/footer';
 
 
 import './src/sass/styles.sass';
@@ -9,5 +9,5 @@ import './src/sass/styles.sass';
 document.addEventListener('DOMContentLoaded', function () {
   initHeader();
   initSubscribeInput();
-  initFooterMenu();
+  initFooter();
 });
