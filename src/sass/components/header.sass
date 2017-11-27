@@ -234,19 +234,21 @@
       .navbar-dropdown
         top: calc(100% + 22px)
 
-header
-  .breadcrumb
+header .breadcrumb
+  padding: 1rem
+  +until($tablet)
+    display: none
+  +from($desktop)
+    padding-left: 0
+
+  span,
+  a
+    align-items: stretch
+    overflow: hidden
+    overflow-x: auto
+    white-space: nowrap
     font-size: 14px
     line-height: 17px
-    padding: 1rem
-    +until($tablet)
-      display: none
-    +from($desktop)
-      padding-left: 0
-
-    &.has-column-separator-separator
-      li + li::before
-        content: "\007c"
 
 // Search
 =search-input
