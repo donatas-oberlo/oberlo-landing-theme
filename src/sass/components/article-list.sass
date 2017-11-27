@@ -1,8 +1,17 @@
 .articles-list
   +page-spacing
+  padding-top: $space-m/2
   +until($tablet)
     .column.is-two-thirds
-      padding-bottom: $column-gap * 2 //one column is hidden
+      padding-bottom: $space-xs * 2 //one column is hidden
+    .columns .column:last-child
+      padding-bottom: $space-xs * 2 //one column is hidden
+  .column
+    padding-top: $space-m
+    padding-bottom: $space-m
+    +until($tablet)
+      padding-top: $space-xs
+      padding-bottom: $space-xs
   a
     h1, h2, h3, h4, h5,h6
       color: $content-heading-color
