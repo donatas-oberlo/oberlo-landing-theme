@@ -28,9 +28,27 @@ function initStickySubscribe() {
   });
 }
 
+function initModalCloseBtn(modal) {
+  modal.querySelector('.close-btn');
+  modal.addEventListener('click', (event) => {
+    modal.style.display = 'none';
+  })
+}
+
+function initMobileSubscribe() {
+  const subscribeBtn = document.querySelector('.js-mobile-subscribe');
+  const subscribeModal = document.querySelector('.mobile-subscribe-modal');
+  subscribeBtn.addEventListener('click', (event) => {
+    subscribeModal.style.display = 'flex';
+    initModalCloseBtn(subscribeModal);
+    event.preventDefault();
+  });
+}
+
 function initFooter() {
   initFooterMenu();
   initStickySubscribe();
+  initMobileSubscribe();
 }
 
 export default initFooter;
