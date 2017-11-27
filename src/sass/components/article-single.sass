@@ -17,13 +17,18 @@
     img
       padding-bottom: $space-s
 
-  .article-links-list
+  .article-links-list, #toc_container
     margin: $space-l 0
     padding: $space-sec-l 0
     border-top: 1px solid $border
     border-bottom: 1px solid $border
     +until($tablet)
       margin: $space-mob-l 0
+    .toc_title
+      font-family: $family-strong
+      font-size: rem(22px)
+      line-height: rem(28px)
+      margin-bottom: $space-xs
     ul
       li
         padding: 5px 0 5px 20px
