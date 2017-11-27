@@ -1,11 +1,13 @@
 .articles-list
   +page-spacing
-  padding-top: $space-m/2
   +until($tablet)
     .column.is-two-thirds
       padding-bottom: $space-xs * 2 //one column is hidden
     .columns .column:last-child
       padding-bottom: $space-xs * 2 //one column is hidden
+  .columns
+    margin-top: -$space-m
+    margin-bottom: -$space-m
   .column
     padding-top: $space-m
     padding-bottom: $space-m
