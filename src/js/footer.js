@@ -1,4 +1,4 @@
-window.onload = function () {
+function initFooterMenu() {
   const menuTitles = document.querySelectorAll('a.footer-menu-title');
 
   menuTitles.forEach(title => title.addEventListener('click', (event) => {
@@ -9,4 +9,46 @@ window.onload = function () {
     event.preventDefault();
     title.parentElement.classList.toggle('is-active');
   }));
-};
+}
+
+function initStickySubscribe() {
+  const stickyMenu = document.querySelector('.sticky-subscribe-banner');
+  const closeBtn = stickyMenu.querySelector('.icon-close');
+  const showThreshold = 300;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > showThreshold) {
+      stickyMenu.style.display = 'block';
+    } else {
+      stickyMenu.style.display = 'none';
+    }
+  });
+  closeBtn.addEventListener('click', (event) => {
+    stickyMenu.style.display = 'none';
+    event.preventDefault();
+  });
+}
+
+function initModalCloseBtn(modal) {
+  modal.querySelector('.close-btn');
+  modal.addEventListener('click', (event) => {
+    modal.style.display = 'none';
+  })
+}
+
+function initMobileSubscribe() {
+  const subscribeBtn = document.querySelector('.js-mobile-subscribe');
+  const subscribeModal = document.querySelector('.mobile-subscribe-modal');
+  subscribeBtn.addEventListener('click', (event) => {
+    subscribeModal.style.display = 'flex';
+    initModalCloseBtn(subscribeModal);
+    event.preventDefault();
+  });
+}
+
+function initFooter() {
+  initFooterMenu();
+  initStickySubscribe();
+  initMobileSubscribe();
+}
+
+export default initFooter;

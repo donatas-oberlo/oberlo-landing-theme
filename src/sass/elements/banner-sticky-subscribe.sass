@@ -1,0 +1,72 @@
+.sticky-subscribe-banner
+  display: none
+  position: fixed
+  z-index: 10
+  bottom: 0
+  height: 80px
+  width: 100%
+  border: 1px solid $border
+  background: #ffffff
+  padding: 0 $space-m
+  +until($desktop)
+    padding: 0 $space-mob-m
+  +until($tablet)
+    display: none
+  .container
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .close-wrapper
+    display: flex
+    align-items: center
+    margin-left: $space-l
+    +until(900px)
+      margin-left: $space-s
+    a
+      display: block
+      .icon-close
+        width: 2rem
+        height: 2rem
+        vertical-align: top
+  .form-wrapper
+    display: flex
+    .field
+      margin: 0
+    input
+      width: 300px
+      +until(900px)
+        width: 200px
+
+.mobile-subscribe-modal
+  position: fixed
+  background: #ffffff
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 9999
+  text-align: center
+  display: none
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  .modal-title
+    padding: 0 $space-m
+  .modal-footer
+    position: absolute
+    text-align: center
+    bottom: $space-s
+
+  .field
+    padding: 0 1.25rem
+    button
+      margin-top: $space-s
+
+  .close-btn
+    position: absolute
+    top: 1rem
+    right: 1rem
+    svg
+      width: 2rem
+      height: 2rem
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="expandable">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
   {{/if}}
 </head>
 <body>
-{{> components/header showHeaderBanner="true"}}
+{{> components/header showHeaderBanner="true" expanded="true"}}
 <div class="container articles-list">
   <div class="columns">
     <div class="column is-two-thirds">
@@ -35,7 +35,21 @@
       </article>
     </div>
     <div class="column is-hidden-mobile">
-      <div class="brand-background takeup-space">
+      <div class="banner-sidebar-subscribe">
+        <div>
+          <h2 class="is-inverted">Join our Community</h2>
+          <p class="is-inverted">Receive tips how to make your dropshipping business work</p>
+          <div class="field">
+            <p class="control is-expanded">
+              <input class="input" type="email">
+              <label>Enter you email</label>
+            </p>
+            <p class="control">
+              <button class="button is-default is-fullwidth">Subscribe</button>
+            </p>
+          </div>
+          <p class="is-inverted is-small">Unsubscribe anytime</p>
+        </div>
       </div>
     </div>
   </div>

@@ -4194,6 +4194,10 @@ sass-loader@^6.0.6:
     lodash.tail "^4.1.1"
     pify "^3.0.0"
 
+sass-rem@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/sass-rem/-/sass-rem-2.0.0.tgz#b1066f2077f59b95f9ef61c80ca2defd502c65c0"
+
 sax@~1.2.1:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"

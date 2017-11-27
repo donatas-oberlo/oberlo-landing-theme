@@ -1,9 +1,4 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
+h1, h2, h3, h4, h5, h6
   color: $content-heading-color
   font-family: $content-heading-font-family
   &.is-inverted
@@ -13,66 +8,84 @@ blockquote,
 p
   font-family: $family-primary
 
-h1
-  font-size: 2.25rem
-  line-height: 2.625rem
-  +until($tablet)
-    font-size: 1.625rem
-    line-height: 2.25rem
+@each $heading in $headings
+  #{nth($heading, 1)}
+    font-size: rem(nth($heading, 2))
+    line-height: rem(nth($heading, 3))
+    +until($tablet)
+      font-size: rem(nth($heading, 4))
+      line-height: rem(nth($heading, 5))
 
-h2
-  font-size: 1.875rem
-  line-height: 2.375rem
-  +until($tablet)
-    font-size: 1.375rem
-    line-height: 1.75rem
+article, .content-spacing
+  h1
+    margin-bottom: $space-xs
+  h2, h3
+    margin-bottom: $space-s
+    &:not(:first-child)
+      margin-top: $space-l
+    +until($tablet)
+      margin-bottom: $space-mob-s
+  h4, h5
+    margin-bottom: $space-xs
+  h5
+    margin-top: $space-xs
+  h6
+    margin-bottom: $space-sec-xs
+  p
+    margin-bottom: $space-s
 
-h3
-  font-size: 1.625rem
-  line-height: 2.25rem
+=content-elements-spacing
+  margin-top: $space-m
+  margin-bottom: $space-m
   +until($tablet)
-    font-size: 1.25rem
-    line-height: 1.875rem
+    margin-top: $space-mob-m
+    margin-bottom: $space-mob-m
 
-h4
-  font-size: 1.375rem
-  line-height: 1.75rem
+=is-text
+  font-size: rem(18px)
+  line-height: rem(30px)
+
+=is-medium-text
+  font-size: rem(16px)
+  line-height: rem(24px)
+
+=is-small-text
+  font-size: rem(14px)
+  line-height: rem(20px)
+
+=is-intro-text
+  font-size: rem(22px)
+  line-height: rem(32px)
   +until($tablet)
-    font-size: 1.125rem
-    line-height: 1.5rem
-
-h5
-  font-size: 1.125rem
-  line-height: 1.875rem
-  +until($tablet)
-    font-size: 1.125rem
-    line-height: 1.875rem
-
-h6
-  font-size: 1rem
-  line-height: 1.5rem
+    font-size: rem(18px)
+    line-height: rem(30px)
 
 blockquote
-  font-size: 1.875rem
-  line-height: 2.375rem
-  &.is-brand-color
-    color: $brand
+  font-size: rem(30px)
+  line-height: rem(38px)
+  color: $brand
+  +content-elements-spacing
+  +until($tablet)
+    font-size: rem(26px)
+    line-height: rem(36px)
   &.is-medium
-    font-size: 1.625rem
-    line-height: 2.25rem
+    font-size: rem(26px)
+    line-height: rem(36px)
+    +until($tablet)
+      font-size: rem(22px)
+      line-height: rem(34px)
 
 a
   color: $link
   &:hover
     color: $brand
   &.is-small
-    font-size: 0.875rem
-    line-height: 1.25rem
+    +is-small-text
 
 a.read-more
   position: relative
-  font-size: 1.125rem
-  line-height: 1.875rem
+  font-size: rem(18px)
+  line-height: rem(30px)
   padding-right: 0.7em
   &:after
     +arrow-after($link, -135deg)
@@ -82,20 +95,16 @@ a.read-more
       border-color: $brand
 
 p, span
-  font-size: 1.125rem
-  line-height: 1.875rem
+  +is-text
   &.is-inverted
     color: #ffffff
   &.is-intro
-    font-size: 1.375rem
-    line-height: 2rem
+    +is-intro-text
   &.is-medium
-    font-size: 1rem
-    line-height: 1.5rem
+    +is-medium-text
   &.is-small
     color: $sub-text
-    font-size: 0.875rem
-    line-height: 1.25rem
+    +is-small-text()
     &.is-inverted
       color: #ffffff
 
@@ -110,8 +119,8 @@ p, span
       position: absolute
       right: 0
       content: "\2022"
-      font-size: 1.125rem
-      line-height: 1.125rem
+      font-size: rem(18px)
+      line-height: rem(18px)
       color: $border
     &:last-child
       &::after

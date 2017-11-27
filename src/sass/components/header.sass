@@ -140,7 +140,11 @@
   z-index: 30
   transition: height 0.3s
   border-bottom: 1px solid $border
-
+  .navbar-brand
+    text-align: left
+    .icon-oberlo-logo
+      width: 8.75rem
+      height: 2.1rem
   // mobile
   +until($desktop)
     .navbar-start,
@@ -158,6 +162,8 @@
         width: 100%
         text-align: left
         border-radius: 0
+        &.is-small
+          padding-top: rem(9px)
 
     .navbar-backdrop
       position: fixed
@@ -177,6 +183,7 @@
       white-space: nowrap
 
       .button
+        padding-top: rem(9px)
         transition: opacity 0.6s ease
         opacity: 1
 
@@ -201,10 +208,12 @@
     #nav-search-item
       border-top: 1px solid $border
       border-bottom: 1px solid $border
-
-      img
-        width: 1.5rem
-        margin-right: 1.1rem
+      & > div
+        +center-element
+        padding-right: 1rem
+      .icon-loop
+        width: 2rem
+        height: 2rem
 
     .navbar-item
       padding: 0
@@ -275,10 +284,10 @@ header .breadcrumb
   width: 2rem
   cursor: pointer
 
-  .icon-search,
+  .icon-loop,
   .icon-close
     max-height: 100%
-    width: 2.5rem
+    width: 2rem
     transition: visibility 0s, opacity 0.3s linear
     position: absolute
 
@@ -300,11 +309,6 @@ header .breadcrumb
     flex: 1
 
     +search-input
-
-  img
-    max-height: 100%
-    width: 2.5rem
-    margin-right: 0.7rem
 
 #nav-search-field
   flex: 1
@@ -335,7 +339,7 @@ header .breadcrumb
     display: block
 
   .nav-search-button
-    .icon-search
+    .icon-loop
       visibility: hidden
       opacity: 0
 
