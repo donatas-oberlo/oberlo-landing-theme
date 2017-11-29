@@ -1,3 +1,9 @@
+@keyframes show
+  from
+    opacity: 0
+  to
+    opacity: 1
+
 .header-promo
   height: 20rem
   background-color: #F0F3F7
@@ -6,7 +12,7 @@
     text-align: left
     height: 100%
 
-    > div
+    .header-promo-content
       width: 33rem
       padding: 2.5rem 1rem 0 0
       position: absolute
@@ -14,11 +20,24 @@
       justify-content: center
       flex-direction: column
 
-      > p,
-      > div.field
-        padding-top: 1rem
-        padding-bottom: 0
-        margin-bottom: 0
+      .form-submit,
+      .form-loading,
+      .form-done
+        animation: show 0.2s ease-in-out both
+
+      .form-loading,
+      .form-done
+        display: none
+
+      .form-submit
+        > p
+          margin-top: 1rem
+
+        > div.field
+          margin-bottom: 0
+
+        input:-webkit-autofill
+          -webkit-box-shadow: 0 0 0 30px white inset
 
     > .header-promo-image
       margin-left: 33rem
@@ -26,3 +45,15 @@
       width: 100%
       background-image: url(/assets/header-promo.jpg)
       background-size: cover
+
+  &.submit-loading .header-promo-content
+    .form-submit
+      display: none
+    .form-loading
+      display: block
+
+  &.submit-done .header-promo-content
+    .form-submit
+      display: none
+    .form-done
+      display: block
