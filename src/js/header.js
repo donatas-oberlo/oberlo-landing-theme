@@ -50,7 +50,7 @@ function initShrinkHeader() {
   const $header = document.querySelector('.navbar-primary');
 
   if ($header && document.body.parentElement.classList.contains('expandable')) {
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
       const scroll = getCurrentScroll();
 
       $header.classList.toggle('expanded', scroll < shrinkHeader);
@@ -63,8 +63,7 @@ function initSearchNavbarSecondary() {
   const $navbar = document.querySelector('.navbar-secondary');
   const $input = document.querySelector('#nav-search-field input');
 
-
-  if ($btn && $navbar) {
+  if ($btn && $navbar && $input) {
     $btn.addEventListener('click', () => {
       $navbar.classList.toggle('search');
 

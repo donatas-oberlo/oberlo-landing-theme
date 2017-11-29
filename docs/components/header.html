@@ -44,21 +44,36 @@
   </div>
   {{#if showHeaderBanner}}
   <div class="header-promo is-hidden-touch">
-    <div class="container">
-      <div class="">
+    <div class="container content">
+      <div class="header-promo-content">
         <h1>Join our Amazing Community</h1>
         <p class="is-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-        <div class="field is-grouped">
-          <p class="control is-expanded">
-            <input class="input" type="email">
-            <label>Enter you email</label>
-          </p>
-          <p class="control">
-            <button class="button is-default">Subscribe</button>
-          </p>
+        <div>
+          <div class="form-submit">
+            <div class="field is-grouped">
+              <p class="control is-expanded">
+                <input class="input" name="EMAIL" type="email">
+                <label>Enter you email</label>
+              </p>
+
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input id='submit-token' type="text" name="b_0d9b1f81906d86da6edf96d6a_d278124e87" tabindex="-1" value="">
+              </div>
+              <p class="control">
+                <button class="button is-default">Subscribe</button>
+              </p>
+            </div>
+            <span class="invalid-feedback">Please enter a valid email address</span>
+            <p class="is-small">Unsubscribe anytime</p>
+          </div>
+          <div class="form-loading">
+            <p>Loading...</p>
+          </div>
+          <div class="form-done">
+            <h4>Thanks for subscribing!</h4>
+            <button class="button is-default">Done</button>
+          </div>
         </div>
-        <span class="invalid-feedback">Please enter a valid email address</span>
-        <p class="is-small">Unsubscribe anytime</p>
       </div>
       <div class="header-promo-image"></div>
     </div>
