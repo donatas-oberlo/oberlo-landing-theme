@@ -44,6 +44,21 @@ function initModalCloseBtn($modal) {
   }
 }
 
+function initSocialShare() {
+  const $socialShare = document.getElementById('at4-share');
+  const showThreshold = 300;
+  const bottomThreshold = document.documentElement.scrollHeight - window.innerHeight + showThreshold;
+  if ($socialShare) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > showThreshold && window.scrollY < bottomThreshold) {
+        $socialShare.style.display = 'block';
+      } else {
+        $socialShare.style.display = 'none';
+      }
+    });
+  }
+}
+
 function initMobileSubscribe() {
   const $subscribeBtn = document.querySelector('.js-mobile-subscribe');
   const $subscribeModal = document.querySelector('.mobile-subscribe-modal');
@@ -61,6 +76,7 @@ function initFooter() {
   initFooterMenu();
   initStickySubscribe();
   initMobileSubscribe();
+  initSocialShare();
 }
 
 export default initFooter;
