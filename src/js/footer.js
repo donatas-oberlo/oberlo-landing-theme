@@ -45,18 +45,20 @@ function initModalCloseBtn($modal) {
 }
 
 function initSocialShare() {
-  const $socialShare = document.getElementById('at4-share');
   const showThreshold = 300;
   const bottomThreshold = document.documentElement.scrollHeight - window.innerHeight + showThreshold;
-  if ($socialShare) {
-    window.addEventListener('scroll', () => {
+  let $socialShare = null;
+  window.addEventListener('scroll', function () {
+    if ($socialShare) {
       if (window.scrollY > showThreshold && window.scrollY < bottomThreshold) {
         $socialShare.style.display = 'block';
       } else {
         $socialShare.style.display = 'none';
       }
-    });
-  }
+    } else {
+      $socialShare = document.getElementById('at4-share');
+    }
+  });
 }
 
 function initMobileSubscribe() {

@@ -12,10 +12,23 @@
     padding: 0 $space-m 0 $space-m
     +until($desktop)
       padding: 0
-    p:first-child
+    p:first-of-type
       +is-intro-text
     img
       padding-bottom: $space-s
+    > ul
+      margin-bottom: 1.75rem
+      li
+        padding: 10px 0 10px 20px
+        position: relative
+        font-size: 1.125rem
+        &:before
+          position: absolute
+          content: "\2022"
+          left: 0
+          color: $sub-text
+          font-size: 1.56rem
+          line-height: 1.56rem
 
   .article-links-list, #toc_container
     margin: $space-l 0
