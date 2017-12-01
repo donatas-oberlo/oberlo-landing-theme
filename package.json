@@ -1,10 +1,10 @@
 {
   "author": {
     "name": "Oberlo",
-    "version": "1.0.3",
     "email": "donatas@oberlo.ocm",
     "url": "http://www.oberlo.com"
   },
+  "version": "1.0.3",
   "license": "ISC",
   "dependencies": {},
   "description": "Oberlo landing theme",
