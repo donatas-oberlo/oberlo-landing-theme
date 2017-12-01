@@ -17,14 +17,27 @@ module.exports = {
         loader: 'style-loader',
       }, {
         loader: 'css-loader',
+        options: {
+          alias: {
+            './assets': path.resolve(__dirname, 'assets'),
+          }
+        },
       }, {
         loader: 'sass-loader',
+        options: {
+          includePaths: [
+            path.resolve(__dirname, 'assets')
+          ]
+        }
       }],
     }, {
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel-loader',
-    }],
+    }, {
+      test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
+      loader: 'file-loader'
+    }]
   },
   plugins: [
     new HandlebarsPlugin({
