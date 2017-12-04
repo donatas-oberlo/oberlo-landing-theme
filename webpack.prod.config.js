@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    publicPath: '/dist/prod',
+    publicPath: '/dist/prod/',
     path: path.resolve(__dirname, 'dist/prod')
   },
   module: {
@@ -22,15 +22,27 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
+              alias: {
+                './assets': path.resolve(__dirname, 'assets'),
+              },
               minimize: true
             }
           },
           {
             loader: 'sass-loader',
           }
-        ]
+        ],
       })
-    }]
+    },
+    {
+      test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
+      loader: 'file-loader',
+      options: {
+        publicPath: '',
+        outputPath: 'assets/',
+      }
+    }
+    ]
   },
 
   plugins: [
