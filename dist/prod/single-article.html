@@ -95,24 +95,8 @@
           </div>
         </div>
 
-        <div class="navbar-item has-dropdown is-hoverable">
+        <div class="navbar-item">
           <a class="navbar-link">Store Setup</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item">Drop down menu 1</a>
-            <a class="navbar-item">Drop down menu 2</a>
-            <a class="navbar-item">Drop down menu 3</a>
-            <a class="navbar-item">Drop down menu 4</a>
-          </div>
-        </div>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">Marketing Your Store</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item">Drop down menu 1</a>
-            <a class="navbar-item">Drop down menu 2</a>
-            <a class="navbar-item">Drop down menu 3</a>
-            <a class="navbar-item">Drop down menu 4</a>
-          </div>
         </div>
       </div>
 
@@ -133,12 +117,16 @@
       </div>
     </nav>
   </div>
-  <nav class="container breadcrumb has-column-separator" aria-label="breadcrumbs">
-    <ul>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">What to Sell</a></li>
-      <li class="is-active"><a href="#" aria-current="page">Product Listing</a></li>
-    </ul>
+  <nav class="container breadcrumb has-column-separator-separator" aria-label="breadcrumbs">
+    <span xmlns:v="http://rdf.data-vocabulary.org/#">
+      <span rel="v:child" typeof="v:Breadcrumb">
+        <a href="http://oberlo-landing.myshopify.io/blog" rel="v:url" property="v:title" data-wpel-link="internal">Blog</a>
+        <span rel="v:child" typeof="v:Breadcrumb">
+          <a href="http://oberlo-landing.myshopify.io/inspiration" rel="v:url" property="v:title" data-wpel-link="internal">Inspiration</a>
+            <span class="breadcrumb_last">Fear of Failure: How to Overcome Fear in Business</span>
+        </span>
+      </span>
+    </span>
   </nav>
 </header>
 <div class="container article-single">
