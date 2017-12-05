@@ -51,14 +51,15 @@
 
   .has-dropdown
     .navbar-link::after
-      +arrow($navbar-dropdown-arrow)
+      +arrow-menu($navbar-dropdown-arrow)
 
     &:hover
       .navbar-link
         color: $brand
-
-      .navbar-link::after
-        border-bottom: 0.3125rem solid $brand
+      +from($desktop)
+        .navbar-link::after
+          transform: rotate(0deg)
+          margin-top: rem(-8px)
 
   // mobile
   +until($desktop)
@@ -244,8 +245,8 @@
         top: calc(100% + 22px)
 
 header .breadcrumb
-  padding: 1rem
-  +until($tablet)
+  padding: $space-sec-m 0
+  +until($desktop)
     display: none
   +from($desktop)
     padding-left: 0
@@ -253,11 +254,13 @@ header .breadcrumb
   span,
   a
     align-items: stretch
-    overflow: hidden
-    overflow-x: auto
     white-space: nowrap
     font-size: 14px
     line-height: 17px
+  a
+    padding-right: 1rem
+    margin-right: 1rem
+    border-right: 1px solid $border
 
 // Search
 =search-input
@@ -299,6 +302,24 @@ header .breadcrumb
   visibility: visible
   opacity: 1
   transition: visibility 0s, opacity 0.3s linear
+  +from($desktop)
+    .navbar-item
+      position: relative
+      &:after
+        position: absolute
+        content: ""
+        border-right: 1px solid $border
+        margin-top: -12px
+        height: 24px
+        top: 50%
+        right: 0
+      &:last-child
+        &:after
+          display: none
+  .navbar-item.has-dropdown
+    padding: 0 1rem
+
+
 
 #nav-search-item
   display: flex

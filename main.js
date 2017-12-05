@@ -4,6 +4,7 @@ import initFooter from './src/js/footer';
 
 
 import './src/sass/styles.sass';
+import './docs/sass/docs.sass';
 
 /* On page load */
 document.addEventListener('DOMContentLoaded', function () {

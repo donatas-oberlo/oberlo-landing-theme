@@ -35,3 +35,24 @@
   +until($desktop)
     right: 1.5em
 
+=arrow-menu($color)
+  color: $color
+  border-left: rem(4px) solid transparent
+  border-right: rem(4px) solid transparent
+  border-bottom: rem(4px) solid $color
+  border-top: 0
+  content: " "
+  display: block
+  height: rem(8px)
+  width: rem(8px)
+  pointer-events: none
+  position: absolute
+  transform: rotate(180deg)
+  margin-top: -0.28em
+  right: 1.125em
+  top: 50%
+
+  // mobile
+  +until($desktop)
+    right: 1.5em
+

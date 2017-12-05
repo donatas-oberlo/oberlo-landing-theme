@@ -1,10 +1,13 @@
+$input-font-size: rem(14px)
+$input-line-height: rem(20px)
+
 .control
   height: 44px
 
 .field
   input
-    font-size: 14px
-    line-height: 20px
+    font-size: $input-font-size
+    line-height: $input-line-height
     color: transparent
     height: 100%
     box-shadow: none
@@ -15,19 +18,19 @@
     outline: none
 
   label
-    font-size: 14px
-    line-height: 20px
+    font-size: $input-font-size
+    line-height: $input-line-height
     color: $sub-text
     position: absolute
     transition: all .2s
 
     margin-top: -30px
-    margin-left: 8px
+    margin-left: 15px
 
   &.is-active
     input
-      line-height: 14px
-      font-size: 14px
+      line-height: rem(14px)
+      font-size: $input-font-size
       color: #18222E
       padding: 16px 0 0 10px
       box-shadow: none
