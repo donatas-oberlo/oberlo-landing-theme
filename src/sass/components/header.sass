@@ -258,9 +258,11 @@ header .breadcrumb
     font-size: 14px
     line-height: 17px
   a
-    padding-right: 1rem
-    margin-right: 1rem
+    padding-right: 0.65rem
+    margin-right: 0.5rem
     border-right: 1px solid $border
+    overflow: hidden
+    text-overflow: ellipsis
 
 // Search
 =search-input
@@ -368,3 +370,13 @@ header .breadcrumb
       visibility: visible
       opacity: 1
 
+.navbar-item.is-separated
+  position: relative
+  &:after
+    position: absolute
+    content: ""
+    border-right: 1px solid $border
+    margin-top: -12px
+    height: 24px
+    top: 50%
+    right: 0
