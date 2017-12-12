@@ -2,9 +2,9 @@
   +page-spacing
   +until($tablet)
     .column.is-two-thirds
-      padding-bottom: $space-xs * 2 //one column is hidden
+      padding-bottom: $space-xs * 4 //one column is hidden
     .columns .column:last-child
-      padding-bottom: $space-xs * 2 //one column is hidden
+      padding-bottom: $space-xs * 4 //one column is hidden
   .columns
     margin-top: -$space-m
     margin-bottom: -$space-m
@@ -28,6 +28,9 @@
     h2
       font-size: 1.375rem
       line-height: 1.75rem
+    &.has-breadcrumb
+      padding-top: 0
+      overflow: hidden
   .article-meta
     padding: $space-xs 0 $space-sec-xs 0
     a
