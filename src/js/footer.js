@@ -45,7 +45,7 @@ function initModalCloseBtn($modal) {
 }
 
 function initSocialShare() {
-  if (!document.querySelector('container.article-single')) {
+  if (!document.querySelector('.article-single')) {
     return;
   }
   const showThreshold = 300;
