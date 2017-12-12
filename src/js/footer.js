@@ -45,8 +45,11 @@ function initModalCloseBtn($modal) {
 }
 
 function initSocialShare() {
+  if (!document.querySelector('container.article-single')) {
+    return;
+  }
   const showThreshold = 300;
-  const bottomThreshold = document.documentElement.scrollHeight - window.innerHeight + showThreshold;
+  const bottomThreshold = document.documentElement.scrollHeight - (window.innerHeight + showThreshold + 200);
   let $socialShare = null;
   window.addEventListener('scroll', function () {
     if ($socialShare) {
