@@ -24,13 +24,14 @@
   &.search-results, &.not-found
     h1
       margin-bottom: $space-xs
+  +from($desktop)
+    &.has-breadcrumb
+      padding-top: 0
+      overflow: hidden
   +until($desktop)
     h2
       font-size: 1.375rem
       line-height: 1.75rem
-    &.has-breadcrumb
-      padding-top: 0
-      overflow: hidden
   .article-meta
     padding: $space-xs 0 $space-sec-xs 0
     a
