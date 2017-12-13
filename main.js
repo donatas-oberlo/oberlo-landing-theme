@@ -9,6 +9,6 @@ import './docs/sass/docs.sass';
 /* On page load */
 document.addEventListener('DOMContentLoaded', function () {
   initHeader();
-  initSubscribeInput();
+  // initSubscribeInput();
   initFooter();
 });
