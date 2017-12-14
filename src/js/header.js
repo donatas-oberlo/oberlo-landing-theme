@@ -58,6 +58,24 @@ function initShrinkHeader() {
   }
 }
 
+function addEventForClose() {
+  const $navbar = document.querySelector('.navbar-secondary');
+  const $input = document.querySelector('#nav-search-field');
+  const $btn = document.querySelector('.navbar-secondary .navbar-end');
+
+  window.addEventListener('click', () => {
+    $navbar.classList.remove('search');
+  }, { once: true });
+
+  $input.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  $btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+}
+
 function initSearchNavbarSecondary() {
   const $btn = document.querySelector('.nav-search-button');
   const $navbar = document.querySelector('.navbar-secondary');
@@ -66,6 +84,9 @@ function initSearchNavbarSecondary() {
   if ($btn && $navbar && $input) {
     $btn.addEventListener('click', () => {
       $navbar.classList.toggle('search');
+      if ($navbar.classList.contains('search')) {
+        addEventForClose();
+      }
 
       if ($navbar.classList.contains('search')) {
         $input.focus();
