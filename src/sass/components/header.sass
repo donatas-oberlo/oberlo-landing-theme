@@ -111,8 +111,8 @@
   +from($desktop)
     .navbar-dropdown
       background-color: $white
-      width: calc(150%)
-      left: calc(-25%)
+      width: calc(120%)
+      left: calc(-10%)
       box-shadow: 0 5px 19px 1px rgba(0, 0, 0, 0.09)
       border-radius: 0
       padding-bottom: 1rem
@@ -246,6 +246,7 @@
 
 header .breadcrumb
   padding: $space-sec-m 0
+  color: $sub-text
   +until($desktop)
     display: none
   +from($desktop)
@@ -318,6 +319,10 @@ header .breadcrumb
       &:last-child
         &:after
           display: none
+  .navbar-dropdown
+    .navbar-item
+      &:after
+        display: none
   .navbar-item.has-dropdown
     padding: 0 1rem
 
