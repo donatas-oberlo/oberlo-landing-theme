@@ -1,13 +1,18 @@
 .sticky-subscribe-banner
-  display: none
   position: fixed
   z-index: 10
-  bottom: 0
+  bottom: -80px
+  transition-property: bottom
+  transition-duration: .5s
   height: 80px
   width: 100%
   border: 1px solid $border
   background: #ffffff
   padding: 0 $space-m
+  &.is-shown
+    bottom: 0
+    transition-property: bottom
+    transition-duration: .5s
   +until($desktop)
     padding: 0 $space-mob-m
   +until($tablet)
