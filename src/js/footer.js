@@ -46,15 +46,18 @@ function initStickySubscribe() {
 
     $closeBtn.addEventListener('click', (event) => {
       $stickyMenu.classList.remove('is-shown');
+      $stickyMenu.classList.add('is-closed');
       setCookie('sticky_subscribe_banner', 1, 90);
       event.preventDefault();
     });
 
     window.addEventListener('scroll', () => {
-      if (window.scrollY > showThreshold) {
-        $stickyMenu.classList.add('is-shown');
-      } else {
-        $stickyMenu.classList.remove('is-shown');
+      if (!$stickyMenu.classList.contains('is-closed')) {
+        if (window.scrollY > showThreshold) {
+          $stickyMenu.classList.add('is-shown');
+        } else {
+          $stickyMenu.classList.remove('is-shown');
+        }
       }
     });
   }
