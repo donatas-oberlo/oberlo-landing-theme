@@ -1,5 +1,3 @@
-// Moved to WP theme of Oberlo
-
 function validateEmail(email) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return email === '' ? true : re.test(email);
@@ -109,16 +107,23 @@ function sendFormData(url, data, onLoad, onError) {
 }
 
 function sendForm($form, onLoad, onError) {
-  const formUrl = 'https://oberlo.us10.list-manage.com/subscribe/post?u=0d9b1f81906d86da6edf96d6a&amp;id=d278124e87';
+  const url = 'https://oberlo.us10.list-manage.com/subscribe/post-json?u=0d9b1f81906d86da6edf96d6a&id=d278124e87&group[9933][64]=true&c=?';
+  // const url = 'https://oberlo.us10.list-manage.com/subscribe/post-json?u=0d9b1f81906d86da6edf96d6a&id=661c5b640e&group[9929][128]=true&c=?';
   const $email = $form.querySelector('input[name=EMAIL]');
   const $token = $form.querySelector('#submit-token');
+  const subscribeData = {
+    subscribe: 'Subscribe',
+  };
 
   if ($email && $token) {
-    sendFormData(formUrl, {
-      EMAIL: $email.value,
-      [$token.name]: $token.value,
-      subscribe: 'Subscribe',
-    }, onLoad, onError);
+    subscribeData[$token.name] = $token.value;
+    subscribeData.EMAIL = $email.value;
+
+    jQuery.ajax({
+      url,
+      data: subscribeData,
+      dataType: 'jsonp'
+    }).done(onLoad).fail(onError);
   } else {
     onError('Email field not found');
   }
@@ -132,4 +137,33 @@ function initHeaderPromo() {
   }
 }
 
-export default initHeaderPromo;
+function initSidebarSubscribe() {
+  const $sidebarForm = document.querySelector('.banner-sidebar-subscribe');
+
+  if ($sidebarForm) {
+    initRegisterForm($sidebarForm);
+  }
+}
+
+function initStickySubscribe() {
+  const $stickyForm = document.querySelector('.sticky-subscribe-banner');
+
+  if ($stickyForm) {
+    initRegisterForm($stickyForm);
+  }
+}
+
+function initFreeEBook() {
+  const $stickyForm = document.querySelector('.banner-free-ebook');
+
+  if ($stickyForm) {
+    initRegisterForm($stickyForm);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  initSidebarSubscribe();
+  initStickySubscribe();
+  initHeaderPromo();
+  initFreeEBook();
+});
