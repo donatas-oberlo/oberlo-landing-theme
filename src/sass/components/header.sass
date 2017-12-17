@@ -218,6 +218,7 @@
         +center-element
         padding-right: 1rem
       .icon-loop
+        fill: $sub-text
         width: 2rem
         height: 2rem
 
@@ -301,10 +302,17 @@ header .breadcrumb
     width: 2rem
     transition: visibility 0s, opacity 0.3s linear
     position: absolute
+    fill: $sub-text
+  .icon-loop
+    &:hover
+      fill: $brand
 
   .icon-close
+    stroke: $sub-text
     visibility: hidden
     opacity: 0
+    &:hover
+      stroke: $brand
 
 #all-articles
   visibility: visible
@@ -375,13 +383,16 @@ header .breadcrumb
     .icon-loop
       visibility: hidden
       opacity: 0
+      fill: $sub-text
 
     .icon-close
       visibility: visible
+      stroke: $sub-text
       opacity: 1
 
 .navbar-item.is-separated
   position: relative
+  margin-right: rem(20px)
   &:after
     position: absolute
     content: ""
@@ -389,7 +400,7 @@ header .breadcrumb
     margin-top: -12px
     height: 24px
     top: 50%
-    right: 0
+    right: -10px
 
 .search-field-overlay
   position: fixed

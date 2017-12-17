@@ -161,9 +161,13 @@ function initFreeEBook() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+function  initSubscribeInput() {
   initSidebarSubscribe();
   initStickySubscribe();
   initHeaderPromo();
   initFreeEBook();
-});
+}
+
+export default initSubscribeInput;
+
+
