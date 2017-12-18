@@ -107,8 +107,8 @@ function sendFormData(url, data, onLoad, onError) {
 }
 
 function sendForm($form, onLoad, onError) {
-  const url = 'https://oberlo.us10.list-manage.com/subscribe/post-json?u=0d9b1f81906d86da6edf96d6a&id=d278124e87e&c=?';
-  // const url = 'https://oberlo.us10.list-manage.com/subscribe/post-json?u=0d9b1f81906d86da6edf96d6a&id=661c5b640e&c=?';
+  // const url = 'https://oberlo.us10.list-manage.com/subscribe/post-json?u=0d9b1f81906d86da6edf96d6a&id=d278124e87e&c=?';
+  const url = 'https://oberlo.us10.list-manage.com/subscribe/post-json?u=0d9b1f81906d86da6edf96d6a&id=661c5b640e&c=?';
   const $email = $form.querySelector('input[name=EMAIL]');
   const $token = $form.querySelector('#submit-token');
   const $group = $form.querySelector('#submit-group');
