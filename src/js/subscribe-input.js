@@ -163,8 +163,17 @@ function initFreeEBook() {
   }
 }
 
+function initMobileSubscribe() {
+  const $form = document.querySelector('.mobile-banner-social');
+
+  if ($form) {
+    initRegisterForm($form);
+  }
+}
+
 function  initSubscribeInput() {
   initSidebarSubscribe();
+  initMobileSubscribe();
   initStickySubscribe();
   initHeaderPromo();
   initFreeEBook();
