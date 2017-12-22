@@ -164,7 +164,7 @@ function initFreeEBook() {
 }
 
 function initMobileSubscribe() {
-  const $form = document.querySelector('.mobile-banner-social');
+  const $form = document.querySelector('.mobile-subscribe-modal');
 
   if ($form) {
     initRegisterForm($form);
