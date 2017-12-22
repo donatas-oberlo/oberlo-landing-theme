@@ -88,14 +88,16 @@ function initSocialShare() {
       } else {
         $socialShare.style.display = 'none';
       }
-    } else if ($mobileShare) {
+    } else {
+      $socialShare = document.getElementById('at4-share');
+    }
+    if ($mobileShare) {
       if (window.scrollY > showThreshold) {
         $mobileShare.style.display = 'block';
       } else {
         $mobileShare.style.display = 'none';
       }
     } else {
-      $socialShare = document.getElementById('at4-share');
       $mobileShare = document.getElementById('.mobile-banner-social');
     }
   });
