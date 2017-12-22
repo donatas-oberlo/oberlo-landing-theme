@@ -80,6 +80,7 @@ function initSocialShare() {
   const showThreshold = 300;
   const bottomThreshold = document.documentElement.scrollHeight - (window.innerHeight + showThreshold + 200);
   let $socialShare = null;
+  let $mobileShare = null;
   window.addEventListener('scroll', function () {
     if ($socialShare) {
       if (window.scrollY > showThreshold && window.scrollY < bottomThreshold) {
@@ -87,8 +88,15 @@ function initSocialShare() {
       } else {
         $socialShare.style.display = 'none';
       }
+    } else if ($mobileShare) {
+      if (window.scrollY > showThreshold) {
+        $mobileShare.style.display = 'block';
+      } else {
+        $mobileShare.style.display = 'none';
+      }
     } else {
       $socialShare = document.getElementById('at4-share');
+      $mobileShare = document.getElementById('.mobile-banner-social');
     }
   });
 }
