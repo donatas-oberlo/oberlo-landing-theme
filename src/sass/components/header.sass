@@ -390,17 +390,18 @@ header .breadcrumb
       stroke: $sub-text
       opacity: 1
 
-.navbar-item.is-separated
-  position: relative
-  margin-right: rem(20px)
-  &:after
-    position: absolute
-    content: ""
-    border-right: 1px solid $border
-    margin-top: -12px
-    height: 24px
-    top: 50%
-    right: -10px
++from($desktop)
+  .navbar-item.is-separated
+    position: relative
+    margin-right: rem(20px)
+    &:after
+      position: absolute
+      content: ""
+      border-right: 1px solid $border
+      margin-top: -12px
+      height: 24px
+      top: 50%
+      right: -10px
 
 .search-field-overlay
   position: fixed
