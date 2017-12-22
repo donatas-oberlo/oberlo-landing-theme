@@ -40,6 +40,7 @@ function getCookie(cname) {
 function initStickySubscribe() {
   const showThreshold = 300;
   const $stickyMenu = document.querySelector('.sticky-subscribe-banner');
+  const $stickyMobileSubscribe = document.querySelector('.mobile-banner-social');
 
   if ($stickyMenu && getCookie('sticky_subscribe_banner') === '') {
     const $closeBtn = $stickyMenu.querySelector('.icon-close');
@@ -57,6 +58,17 @@ function initStickySubscribe() {
           $stickyMenu.classList.add('is-shown');
         } else {
           $stickyMenu.classList.remove('is-shown');
+        }
+      }
+    });
+  }
+  if ($stickyMobileSubscribe) {
+    window.addEventListener('scroll', () => {
+      if (!$stickyMobileSubscribe.classList.contains('is-closed')) {
+        if (window.scrollY > showThreshold) {
+          $stickyMobileSubscribe.classList.add('is-shown');
+        } else {
+          $stickyMobileSubscribe.classList.remove('is-shown');
         }
       }
     });
@@ -80,7 +92,6 @@ function initSocialShare() {
   const showThreshold = 300;
   const bottomThreshold = document.documentElement.scrollHeight - (window.innerHeight + showThreshold + 200);
   let $socialShare = null;
-  let $mobileShare = null;
   window.addEventListener('scroll', function () {
     if ($socialShare) {
       if (window.scrollY > showThreshold && window.scrollY < bottomThreshold) {
@@ -90,15 +101,6 @@ function initSocialShare() {
       }
     } else {
       $socialShare = document.getElementById('at4-share');
-    }
-    if ($mobileShare) {
-      if (window.scrollY > showThreshold) {
-        $mobileShare.style.display = 'block';
-      } else {
-        $mobileShare.style.display = 'none';
-      }
-    } else {
-      $mobileShare = document.getElementById('.mobile-banner-social');
     }
   });
 }
