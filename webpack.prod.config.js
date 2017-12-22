@@ -35,6 +35,11 @@ module.exports = {
       })
     },
     {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loader: 'babel-loader',
+    },
+    {
       test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
       loader: 'file-loader',
       options: {
