@@ -74,7 +74,7 @@
   +until($tablet)
     padding-bottom: $space-sec-xs
     padding-top: $space-sec-s
-    div
+    .footer-bottom-subrow
       padding-bottom: $space-sec-xs
   +from($tablet)
     padding-top: $space-sec-s
@@ -86,11 +86,10 @@
   a
     font-size: rem(14px)
     color: $sub-text
-    &:first-child
-      margin-right: $space-sec-s
+    padding: $space-sec-s
     &:last-child
-      margin-left: $space-sec-s
-  div:last-child
+      padding-right: 0
+  .footer-bottom-subrow:last-child
     +from($tablet)
       text-align: right
 
@@ -112,5 +111,58 @@
       border-width: 6px 6px 0 6px
       border-color: $sub-text transparent transparent transparent
 
+// Language switcher
+.lang-switch-link
+  display: inline-block
+  position: relative
+  > a,
+  svg,
+  .footer-country-arrow
+    transition-delay: .3s
+  svg
+    display: inline-block
+    fill: $sub-text
+    margin-bottom: rem(2px)
+    width: rem(14px)
+    height: rem(14px)
+    vertical-align: middle
+  .footer-country-arrow
+    margin-bottom: rem(2.5px)
+    width: rem(10px)
+    height: rem(10px)
 
+.lang-switch-link:hover
+  .footer-country-arrow
+    transform: rotate(180deg)
+  > a
+    color: #fff
+  svg
+    fill: #fff
 
+.lang-popover
+  background: #fff
+  bottom: rem(40px)
+  max-height: 0
+  overflow: hidden
+  right: 0
+  position: absolute
+  width: rem(150px)
+  text-align: left
+  transition-delay: .3s
+  ul
+    border-bottom: 3px solid $brand
+    margin-bottom: 0
+    padding: $space-sec-xs $space-sec-s
+  li
+    list-style: none
+  a
+    color: $navbar-item-color
+    display: block
+    padding: 0 $space-sec-xs
+    line-height: rem(28px)
+    &:hover
+      color: $navbar-item-hover-color
+
+.lang-switch-link:hover
+  .lang-popover
+    max-height: 500px
